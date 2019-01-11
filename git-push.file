@@ -1,0 +1,3 @@
+to push another commits to dayenio repository
+git remote add origin https://github.com/siemah/dayenio.git
+git push -u origin master
