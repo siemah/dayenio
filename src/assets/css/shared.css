@@ -1,0 +1,9 @@
+:root{
+  --white-color: #ffffff;
+  --black-color: #454545;
+  --font-family: 'Varela Round', sans-serif;
+  --blue-color: #4a00d8;
+} 
+.mb-0 {
+    margin-bottom: 0 !important;
+}

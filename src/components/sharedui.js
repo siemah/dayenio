@@ -1,10 +1,18 @@
-import React, { Children } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
-export const LinkItem = ({ containerClass, to, label, className, Children, ...restProps}) => {
+export const LinkItem = ({ containerClass, to, label, alt, className, Children, ...restProps}) => {
   return (
-    <li className={containerClass}>
-      <Link to={"/"+to} className={className}>{label}</Link>
+    <li className={containerClass || ''}>
+      <Link to={"/"+to} alt={alt || ''}className={className}>{label}</Link>
     </li>
   )
 }
+
+export const SocialContactItem = ({className, href, label, alt, source}) => (
+    <li className={className}>
+      <a href={href} title={label || ''} target={'_blank'} rel="noopener noreferrer">
+        <img src={source} alt={alt||''} />
+      </a>
+    </li>
+)

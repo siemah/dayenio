@@ -1,9 +1,12 @@
 :root{
   --white-color: #ffffff;
   --black-color: #454545;
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;    
+  --font-family: 'Varela Round', sans-serif;
   --blue-color: #4a00d8;
 } 
+body {
+  font-family: var(--font-family);
+}
 .jumbotron {
   height: 100vh;
   width: 100vw;
@@ -11,6 +14,7 @@
   font-family: var(--font-family);
   color: var(--black-color);
   text-align: left;
+  overflow: hidden;
 }
 .jumbotron-left {
   height: 100vh;
@@ -53,7 +57,69 @@
   animation-delay: .5s;
 }
 .jumbotron .section {
-  font-size: 24px;
+  font-size: 20px;
+}
+.jumbotron .services-list {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height: 30px;
+  vertical-align: middle;
+}
+.jumbotron .section .services-list .badge {
+  position: absolute;
+  padding: 2px 5px;
+  top: 0;
+  font-size: 25px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  opacity: 0;
+}
+.jumbotron .services-list .badge.slideup {
+  opacity: 1;  
+  font-size: 20px;
+  animation: slideUp .5s;
+}
+.jumbotron .jumbotron-left .badge-underline {
+  color: #f4bb47; 
+  color: var(--blue-color);
+  font-weight: 400;
+  position: relative;
+}
+
+.jumbotron-right {
+  position: relative;
+  top: 10vh; 
+}
+.jumbotron-right .responsive-image {
+  position: relative;
+  z-index: 10;
+}
+.jumbotron-right .bg-blue {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.jumbotron .scroll-indicator {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blue-color);
+  background-image: linear-gradient(to right, var(--blue-color), #ea3b3b); 
+  z-index: 20;
+  border-radius: 20px;
+  transition: box-shadow .5s;
+  overflow: hidden;
+}
+.jumbotron .scroll-indicator a {
+  color: #ffffff;
+  display: block;
 }
 
 @keyframes full-width-deasapear {
@@ -100,5 +166,34 @@
   90% {
     right: 0%;
     left: 100%;
+  }
+}
+@keyframes slideUp {
+  0% {opacity: 0;transform: translateY(30px)}
+  100% {opacity: 1;transform: translateY(0px)}
+}
+
+/***********************
+      MEDIA QUERY
+***********************/
+
+@media only screen and (max-width: 600px) {
+  .jumbotron,
+  .jumbotron .jumbotron-left {
+    height: initial;
+  }
+  .jumbotron .jumbotron-left .jumbotron-title {
+    margin-top: 10vh;
+    margin-bottom: .5rem;
+  }
+  .jumbotron .jumbotron-left .jumbotron-title::before {
+    top: -5vh;
+  }
+  .jumbotron .jumbotron-left .jumbotron-title::after {
+    top: calc(-5vh + 10px);
+  }
+
+  .jumbotron .jumbotron-right {
+    top: 0; 
   }
 }
