@@ -1,7 +1,11 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
+import { Link } from 'gatsby'
+
+import debounce from 'lodash.debounce';
+import PropTypes from 'prop-types'
+
 import { LinkItem } from './sharedui';
+
 import 'materialize-css';
 import '../assets/css/navbar.css';
 import 'materialize-css/dist/css/materialize.min.css';
@@ -9,6 +13,14 @@ import 'materialize-css/dist/css/materialize.min.css';
 export default class header extends React.Component {
   
   mobileBtn = React.createRef()
+  navbarRef = React.createRef()
+
+  
+  constructor(props) {
+    super(props);
+    this.emitScroll = debounce(this._onScroll, 20050);
+    this._onScroll = this._onScroll.bind(this);
+  }
 
   _onClickMobileBtn = (e) => {
     e.preventDefault();
@@ -21,11 +33,44 @@ export default class header extends React.Component {
       document.querySelector(".top-navbar").className = 'top-navbar z-depth-0';
     } 
   }
+
+  _onScroll() {
+    window.addEventListener('scroll', e => {
+      let currentClasses = this.navbarRef.current.className;
+      let scrollY = window.scrollY;
+      console.log("dsssss", sessionStorage.__last_scrollY > scrollY, !~currentClasses.indexOf(' fixed-top'))
+      if ( 
+        sessionStorage.__last_scrollY > scrollY &&
+        !~currentClasses.indexOf(' fixed-top')
+      ) {
+        console.log("fixed-top", currentClasses.indexOf(' fixed-top'));
+        this.navbarRef.current.className += ' fixed-top';
+      } else if(
+        sessionStorage.__last_scrollY < scrollY &&
+        currentClasses.indexOf(' fixed-top')
+      ) {
+        this.navbarRef.current.className = currentClasses.replace(' fixed-top', '');
+      }
+      sessionStorage.__last_scrollY = scrollY;
+    })
+  } 
+
+  _onLoad = () => {
+    window.addEventListener('load', e => {
+      sessionStorage.__last_scrollY = window.scrollY;
+      this._onScroll()
+    })
+  }
+
+  componentWillMount = () => {
+    this._onLoad();
+  }
   
 
   render() {
     return (
-      <nav className='top-navbar z-depth-0'>
+      <>
+      <nav className='top-navbar z-depth-0' ref={this.navbarRef}>
         <div className="nav-wrapper">
           <Link to="/" className="brand-logo">DAYENIO</Link>
           <a href="#" onClick={this._onClickMobileBtn} ref={this.mobileBtn} id='btn-mobile' className="btn-mobile-menu js-mobile-menu-trigger" role="button">
@@ -42,6 +87,8 @@ export default class header extends React.Component {
           </ul>
         </div>
       </nav>
+      <div className="fixed-fake"></div>
+      </>
     );
   }
 }

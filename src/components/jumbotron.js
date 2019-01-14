@@ -43,7 +43,7 @@ export default class Jumbotron extends React.Component {
                 DayenIO.
             </h1>
               <div className='section'>
-                You want to make a
+                You want to make a/an &nbsp;
                 <div className='services-list'>
                     <strong className='badge website slideup' data-index='0'>Website.</strong>
                     <strong className='badge android' data-index='1'>Android app.</strong>

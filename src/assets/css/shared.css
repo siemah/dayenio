@@ -5,8 +5,33 @@
   --blue-color: #4a00d8;
 } 
 .mb-0 {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 .ml-0 {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  animation: slideDown .5s;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: top .5s;
+}
+.fixed-top + .fixed-fake {
+  display: block;
+  height: 65px;
+  width: 100px;
+}
+@keyframes slideDown {
+  0%{
+    top: -80px;
+  } 
+  100% {
+    top: 0;
+  }
 }
