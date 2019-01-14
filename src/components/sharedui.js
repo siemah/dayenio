@@ -11,7 +11,7 @@ export const LinkItem = ({ containerClass, to, label, alt, className, Children, 
 
 export const SocialContactItem = ({className, href, label, alt, source}) => (
     <li className={className}>
-      <a href={href} title={label || ''} target={'_blank'} rel="noopener noreferrer">
+      <a href={href} title={label || ''} >
         <img src={source} alt={alt||''} />
       </a>
     </li>
