@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Container, Row, Col, Button } from 'react-materialize';
+import { Row, Col, Button } from 'react-materialize';
 import debounce from 'lodash.debounce';
 import '../assets/css/jumbotron.css'; 
 import heroDevelopers from '../assets/images/hero-developers.svg';
@@ -38,7 +38,7 @@ export default class Jumbotron extends React.Component {
         <>
           <Row>
             <Col s={12} m={6} className='jumbotron-left'>
-              <h1 className='jumbotron-title' data-content='We Are'>
+              <h1 className='jumbotron-title before-after-content' data-content='We Are'>
                 <span className="full-width-disapear js-desapear-bg"></span>
                 DayenIO.
             </h1>

@@ -8,12 +8,16 @@ import envelope from '../assets/images/envelope.svg';
 import smartphone from '../assets/images/smartphone.svg'; 
 import problem from '../assets/images/problem.svg'; 
 
-import '../assets/css/shared.css';
 import '../assets/css/footer.css';
 
-export default (props) => {
-  return (
-    <div className='main-footer'>
+export default class Footer extends React.Component {
+  componentDidMount = () => {
+    //window.addEventListener("scroll",  e => console.log("object") )
+  }
+  
+  render () {
+    return (
+      <div className='main-footer'>
 
         <div className="">
 
@@ -56,19 +60,20 @@ export default (props) => {
 
               </Row>
             </Container>
-          
+
           </div>
-        
+
         </div>
         <br clear='both' />
-      <ul className="footer-breadcrumb mb-0 ml-0 s-disapear">
-          <LinkItem  to='/' label='Home' containerClass='breadcrumb-item' />
-          <LinkItem  to='/page-2' label='What we do' containerClass='breadcrumb-item' />
-          <LinkItem  to='/page-2' label='Who we are' containerClass='breadcrumb-item' />
-          <LinkItem  to='/page-2' label='Our works'  containerClass='breadcrumb-item' />
-          <LinkItem  to='/page-2' label='Get in touch' containerClass='breadcrumb-item mb-0' />
+        <ul className="footer-breadcrumb mb-0 ml-0 s-disapear">
+          <LinkItem to='/' label='Home' containerClass='breadcrumb-item' />
+          <LinkItem to='/page-2' label='What we do' containerClass='breadcrumb-item' />
+          <LinkItem to='/page-2' label='Who we are' containerClass='breadcrumb-item' />
+          <LinkItem to='/page-2' label='Our works' containerClass='breadcrumb-item' />
+          <LinkItem to='/page-2' label='Get in touch' containerClass='breadcrumb-item mb-0' />
         </ul>
 
-    </div>
-  )
+      </div>
+    )
+  }
 }

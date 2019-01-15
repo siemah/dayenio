@@ -1,0 +1,73 @@
+.custom-container {
+  width: 90%;
+  min-width: 90%;
+  margin: 0 5%;
+}
+.whatwedo-section {
+  margin-top: 100px;
+}
+
+.whatwedo-section .left-section {
+  margin-top: 11vh;
+}
+.whatwedo-section .left-section h2.before-after-content::before {
+  font-size: 15px !important;
+}
+
+.whatwedo-section .left-section a {
+  color: var(--blue-color);
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 10px 0;
+}
+.whatwedo-section .left-section a:hover::before {
+  width: 60px;
+}
+.whatwedo-section .left-section a::before {
+  content: '';
+  position: absolute;
+  left: 105%;
+  top: 50%;
+  bottom: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: var(--blue-color);
+  transition: width .5s;
+}
+
+.whatwedo-section .left-section h2 {
+  font-size: 30px;
+}
+.whatwedo-section h2::after {
+  background-color: crimson;
+}
+
+.whatwedo-section p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #656565;
+  padding-top: 10px;
+}
+
+.icon-item {
+  padding-left: 30px;
+}
+
+.icon-item img {
+  height: 70px;
+  width: 80px;
+}
+.icon-item p {
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 990px) {
+  .right-section {
+    margin-top: 30px;
+  }
+  .icon-item {
+    padding-left: 0;
+  }
+}

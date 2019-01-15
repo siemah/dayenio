@@ -18,10 +18,14 @@ export default class header extends React.Component {
   
   constructor(props) {
     super(props);
-    this.emitScroll = debounce(this._onScroll, 20050);
-    this._onScroll = this._onScroll.bind(this);
+    this.emitScroll = debounce(this.windowScrollListener, 250);
+    //this.windowScrollListener = this.windowScrollListener.bind(this);
   }
 
+  /**
+   * show menu when user click a burger button
+   * @param {DOMEvent} e domevent receive when a listener has been triggered 
+   */
   _onClickMobileBtn = (e) => {
     e.preventDefault();
     let { target } = e;
@@ -34,27 +38,56 @@ export default class header extends React.Component {
     } 
   }
 
-  _onScroll() {
-    window.addEventListener('scroll', e => {
-      let currentClasses = this.navbarRef.current.className;
+  /**
+   * window scroll listener triggered when user scroll
+   * @param {DOMEvent} e domevent @see firefox.docs
+   */
+  windowScrollListener (e) {
+    console.log("______________", this)
+    let currentClasses = this.navbarRef.current.className;
+    let scrollY = window.scrollY;
+    console.log("scroll")
+    if (
+      sessionStorage.__last_scrollY > scrollY &&
+      !~currentClasses.indexOf(' fixed-top')
+    ) {
+      this.navbarRef.current.className += ' fixed-top';
+    } else if (
+      sessionStorage.__last_scrollY < scrollY &&
+      currentClasses.indexOf(' fixed-top')
+    ) {
+      this.navbarRef.current.className = currentClasses.replace(' fixed-top', '');
+
+    }
+    sessionStorage.__last_scrollY = scrollY;
+  }
+
+  _onScroll = () => {
+    let { current : navbarElem } = this.navbarRef;
+    window.addEventListener('scroll', (e) => {
+      //console.log("------------------->  ", navbarElem)
+      let currentClasses = navbarElem.className;
       let scrollY = window.scrollY;
-      console.log("dsssss", sessionStorage.__last_scrollY > scrollY, !~currentClasses.indexOf(' fixed-top'))
-      if ( 
+      let styledElem = navbarElem.style;
+      //console.log("scroll")
+      if (
         sessionStorage.__last_scrollY > scrollY &&
         !~currentClasses.indexOf(' fixed-top')
       ) {
-        console.log("fixed-top", currentClasses.indexOf(' fixed-top'));
-        this.navbarRef.current.className += ' fixed-top';
-      } else if(
+        navbarElem.className += ' fixed-top';
+      } else if (
         sessionStorage.__last_scrollY < scrollY &&
         currentClasses.indexOf(' fixed-top')
       ) {
-        this.navbarRef.current.className = currentClasses.replace(' fixed-top', '');
+        navbarElem.className = currentClasses.replace(' fixed-top', '');
       }
       sessionStorage.__last_scrollY = scrollY;
     })
   } 
 
+  /**
+   * window load to init some sessionstorage value
+   */
   _onLoad = () => {
     window.addEventListener('load', e => {
       sessionStorage.__last_scrollY = window.scrollY;
