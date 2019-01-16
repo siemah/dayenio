@@ -63,6 +63,84 @@
   font-size: 17px;
 }
 
+.brands-section {
+  position: relative;
+  margin: 100px 0;
+}
+
+.brands-section .left-section {
+  padding: 100px 0;
+  background-color: #fc4d4e;
+  background: linear-gradient(137.86deg,#4a00d8,#7512b7 23.75%,#fc4d4e); 
+  display: inline-block;
+  width: 60%;
+  color: white;
+  position: relative;
+  transition: top .8s;
+  z-index: 20;
+}
+.brands-section .left-section p {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.brands-section .left-section .before-after-content::before {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.brands-section .left-section .before-after-content::after {
+  background-color: #ffffff;
+}
+
+.brands-logo .col {
+  margin-bottom: 20px;
+}
+
+.brands-logo img {
+  margin-bottom: 5px;
+} 
+.brands-logo strong {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.brands-section .right-section {
+  transition: top .8s;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  height: 100%;
+  background: url('../images/office-work.jpg') no-repeat;
+  background-size: cover;
+  right: 0;
+  margin-top: 0;
+  transition: top .5s;
+}
+
+.brands-section .right-section button { 
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  bottom: 50%;
+  border: none;
+  transform: translate(-50%, -60%);
+  background-color: var(--blue-color);
+  background-image: linear-gradient(to right, var(--blue-color), #ea3b3b);
+  border-radius: 30px;
+  overflow: hidden;
+}
+.brands-section .right-section button a{
+  display: block;
+  color: #ffffff;
+  position: relative;
+  font-weight: 400;
+  transition: color .5s;
+}
+
+
 @media only screen and (max-width: 990px) {
   .right-section {
     margin-top: 30px;
@@ -71,3 +149,22 @@
     padding-left: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .brands-section {
+    margin: 0 0 20px 0;
+  }
+  .brands-section .left-section {
+    width: 100% !important;
+    display: block;
+  }
+  .brands-section .right-section {
+    display: none;
+  }
+  .brands-section .right-section {
+    background: transparent ;
+    background-image: none;
+  }
+
+}
+

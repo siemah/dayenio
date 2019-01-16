@@ -8,6 +8,7 @@ import development from '../assets/images/development.svg';
 import design from '../assets/images/design.svg';
 import marketing from '../assets/images/marketing.svg';
 import '../assets/css/main-section.css'
+import Button from 'react-materialize/lib/Button';
 
 const MainSection = props => {
   return (
@@ -15,7 +16,7 @@ const MainSection = props => {
 
       <Container className='custom-container'>
         <Row className='whatwedo-section'>
-          <Col s={12} l={5} className='left-section'>
+          <Col s={12} l={5} className='left-section js-anime anime'>
             <h2 className='before-after-content' data-content='WHAT WE DO'>Innovation and impact.</h2>
             <p>
               Our team has two goals: optimise every user’s experience, 
@@ -49,6 +50,48 @@ const MainSection = props => {
       </Container>
 
       <div className='brands-section'>
+
+        <div className='left-section col s12 m7 js-parallax' data-direction='up'>
+
+          <Container>
+          
+
+            <h2 className="before-after-content" data-content='BRANDS'>Our happy clients.</h2>
+
+            <p>
+              Hey, we’re old romantics at heart. For 12+ years, we’ve
+              cultivated long-term relationships with leading brands
+              and companies.
+            </p>
+
+            <div className="brands-logo row">
+              <Col s={6} m={3} className='center'>
+                <img src={marketing} width='80' alt="brand name" /><br />
+                <strong>wellness qatar</strong>
+              </Col>
+              <Col s={6} m={3} className='center'>
+                <img src={marketing} width='80' alt="brand name" /><br />
+                <strong>wellness events</strong>
+              </Col>
+              <Col s={6} m={3} className='center'>
+                <img src={marketing} width='80' alt="brand name" /><br />
+                <strong>horizon</strong>
+              </Col>
+              <Col s={6} m={3} className='center'>
+                <img src={marketing} width='80' alt="brand name" /><br />
+                <strong>wellness qatar</strong>
+              </Col>
+            </div>
+
+          </Container>
+
+        </div>
+        
+        <div className='right-section js-parallax' data-direction='down'>
+          <Button className='z-depth-0'>
+            <Link to='/our-work' alt='See what we build to this brands'>Discover more</Link>
+          </Button>
+        </div>
 
       </div>
 

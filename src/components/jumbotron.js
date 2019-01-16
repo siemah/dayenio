@@ -14,18 +14,24 @@ export default class Jumbotron extends React.Component {
     this.emitDebouce = debounce(this.slideUpCurrentBadge, 1500);
   }
   
+  /**
+   * slide some badges element list from bottom
+   * & show them to user after 1.5s between each one 
+   */
   slideUpCurrentBadge = () => {
     let badge = document.querySelector('.badge.slideup');
-    let index = parseInt(badge.getAttribute('data-index'));
-    let timeId = setTimeout(() => {
-      let badge = document.querySelector('.badge.slideup');
-      if(badge) {
-        index = index < 3 ? (index + 1) : 0;
-        badge.className = badge.className.replace(' slideup', '');
-        document.querySelectorAll('.badge')[index].className += ' slideup';
-        this.slideUpCurrentBadge()
-      }
-    }, 1500);
+    if( badge ) {
+      let index = parseInt(badge.getAttribute('data-index'));
+      let timeId = setTimeout(() => {
+        let badge = document.querySelector('.badge.slideup');
+        if (badge) {
+          index = index < 3 ? (index + 1) : 0;
+          badge.className = badge.className.replace(' slideup', '');
+          document.querySelectorAll('.badge')[index].className += ' slideup';
+          this.slideUpCurrentBadge()
+        }
+      }, 1500);
+    }
   }
 
   componentDidMount = () => {
