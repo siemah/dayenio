@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `DayenIO`,
+    description: `dayenio is a team of developers, designers and marketers. 
+    We help brands with conversion-focused marketing campaigns through strategy, design and development.
+    We are in digital field for more than 10 years, 
+    work hard to satisfact our clients and give to user a better experience. We work with more than 10 brands, and we achieve to 
+    make those grow up faster than others. We make communication between costumers and brands smooth and `,
+    author: `@siemah`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,11 +22,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `DayenIO digital team`,
+        short_name: `DayenIO`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#4a00d8`,
+        theme_color: `#4a00d8`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
