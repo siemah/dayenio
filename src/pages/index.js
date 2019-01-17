@@ -25,17 +25,19 @@ class IndexPage extends React.Component {
    */
   isOnViewport = (elem, inViewport = false, lazyLoad = false) => {
     let rect = elem.getBoundingClientRect();
-    if( inViewport )
-      return rect.top < (window.innerHeight || document.documentElement.clientHeight) && rect.top >= 0 ;
-    else if(lazyLoad)
-      return (
-        rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.top >= 0 &&
-        rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
-        rect.left >= 0 
-      );
-    else 
-      return rect.top < (window.innerHeight || document.documentElement.clientHeight) ;
+    if( window !== undefined ) {
+      if (inViewport)
+        return rect.top < (window.innerHeight || document.documentElement.clientHeight) && rect.top >= 0;
+      else if (lazyLoad)
+        return (
+          rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.top >= 0 &&
+          rect.left < (window.innerWidth || document.documentElement.clientWidth) &&
+          rect.left >= 0
+        );
+      else
+        return rect.top < (window.innerHeight || document.documentElement.clientHeight);
+    }
   }
 
   /**
@@ -43,42 +45,44 @@ class IndexPage extends React.Component {
    * @param {DOMEvent} e domevevtn object 
    */
   _onScroll() {
-    let animeNodes   = document.querySelectorAll('.js-anime'); 
-    let parallaxNode = document.querySelector('.js-parallax.right-section'); 
-    let parallaxNodeLeft = document.querySelector('.js-parallax.left-section'); 
-    
-    animeNodes.forEach(nodeElem => {
-      if (this.isOnViewport(nodeElem, true)) {
-        nodeElem.className += ' anime-from-down';
-        nodeElem.className = nodeElem.className.replace(' js-anime', '')
-      }
-    });
+    if( window !== undefined) {
+      let animeNodes = document.querySelectorAll('.js-anime');
+      let parallaxNode = document.querySelector('.js-parallax.right-section');
+      let parallaxNodeLeft = document.querySelector('.js-parallax.left-section');
 
-    sessionStorage.__last_parallax_scrollY = sessionStorage.__last_parallax_scrollY || 0;
-    
+      animeNodes.forEach(nodeElem => {
+        if (this.isOnViewport(nodeElem, true)) {
+          nodeElem.className += ' anime-from-down';
+          nodeElem.className = nodeElem.className.replace(' js-anime', '')
+        }
+      });
 
-    if (parallaxNode && parallaxNodeLeft && window.innerWidth > 600 && this.isOnViewport(parallaxNode) ) {
-      
-      if ( window.scrollY > parseInt(sessionStorage.__last_parallax_scrollY) ) {
-        let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
-        let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
-        parallaxNode.style.top = `${parseInt(lastTop) + 8}px`;
-        parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) - 8}px`;
-      } else {
-        let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
-        let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
-        parallaxNode.style.top = `${parseInt(lastTop) - 8}px`;
-        parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) + 8}px`;
+      sessionStorage.__last_parallax_scrollY = sessionStorage.__last_parallax_scrollY || 0;
+
+
+      if (parallaxNode && parallaxNodeLeft && window.innerWidth > 600 && this.isOnViewport(parallaxNode)) {
+
+        if (window.scrollY > parseInt(sessionStorage.__last_parallax_scrollY)) {
+          let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
+          let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
+          parallaxNode.style.top = `${parseInt(lastTop) + 8}px`;
+          parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) - 8}px`;
+        } else {
+          let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
+          let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
+          parallaxNode.style.top = `${parseInt(lastTop) - 8}px`;
+          parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) + 8}px`;
+        }
+
       }
-      
+      sessionStorage.__last_parallax_scrollY = window.scrollY;
+
     }
-    sessionStorage.__last_parallax_scrollY = window.scrollY;
-
   }
 
   componentDidMount = () => {
-    
-    window.addEventListener("scroll", e => this.emitDebounce(e));
+    if( window !== undefined ) 
+      window.addEventListener("scroll", e => this.emitDebounce(e));
 
   }
   

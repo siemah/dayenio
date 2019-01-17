@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import $ from 'jquery';
+
+import 'materialize-css/dist/css/materialize.min.css';
+
 
 import Header from './header'
 import './layout.css'

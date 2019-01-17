@@ -8,7 +8,6 @@ import { LinkItem } from './sharedui';
 
 import 'materialize-css';
 import '../assets/css/navbar.css';
-import 'materialize-css/dist/css/materialize.min.css';
 
 export default class header extends React.Component {
   
@@ -29,13 +28,15 @@ export default class header extends React.Component {
   _onClickMobileBtn = (e) => {
     e.preventDefault();
     let { target } = e;
-    if (!~target.className.indexOf('active') ) {
-      target.className += ' active fullscreen';
-      document.querySelector(".top-navbar").className += ' visible'
-    } else {
-      target.className = target.className.replace(' active fullscreen', ' ');
-      document.querySelector(".top-navbar").className = 'top-navbar z-depth-0';
-    } 
+    if( document !==undefined ) {
+      if (!~target.className.indexOf('active')) {
+        target.className += ' active fullscreen';
+        document.querySelector(".top-navbar").className += ' visible'
+      } else {
+        target.className = target.className.replace(' active fullscreen', ' ');
+        document.querySelector(".top-navbar").className = 'top-navbar z-depth-0';
+      } 
+    }
   }
 
   /**
@@ -64,35 +65,39 @@ export default class header extends React.Component {
 
   _onScroll = () => {
     let { current : navbarElem } = this.navbarRef;
-    window.addEventListener('scroll', (e) => {
-      //console.log("------------------->  ", navbarElem)
-      let currentClasses = navbarElem.className;
-      let scrollY = window.scrollY;
-      let styledElem = navbarElem.style;
-      //console.log("scroll")
-      if (
-        sessionStorage.__last_scrollY > scrollY &&
-        !~currentClasses.indexOf(' fixed-top')
-      ) {
-        navbarElem.className += ' fixed-top';
-      } else if (
-        sessionStorage.__last_scrollY < scrollY &&
-        currentClasses.indexOf(' fixed-top')
-      ) {
-        navbarElem.className = currentClasses.replace(' fixed-top', '');
-      }
-      sessionStorage.__last_scrollY = scrollY;
-    })
+    if( window !== undefined ) {
+      window.addEventListener('scroll', (e) => {
+        //console.log("------------------->  ", navbarElem)
+        let currentClasses = navbarElem.className;
+        let scrollY = window.scrollY;
+        let styledElem = navbarElem.style;
+        //console.log("scroll")
+        if (
+          sessionStorage.__last_scrollY > scrollY &&
+          !~currentClasses.indexOf(' fixed-top')
+        ) {
+          navbarElem.className += ' fixed-top';
+        } else if (
+          sessionStorage.__last_scrollY < scrollY &&
+          currentClasses.indexOf(' fixed-top')
+        ) {
+          navbarElem.className = currentClasses.replace(' fixed-top', '');
+        }
+        sessionStorage.__last_scrollY = scrollY;
+      })
+    }
   } 
 
   /**
    * window load to init some sessionstorage value
    */
   _onLoad = () => {
-    window.addEventListener('load', e => {
-      sessionStorage.__last_scrollY = window.scrollY;
-      this._onScroll()
-    })
+    if( window !== undefined ) {
+      window.addEventListener('load', e => {
+        sessionStorage.__last_scrollY = window.scrollY;
+        this._onScroll()
+      })
+    }
   }
 
   componentWillMount = () => {
