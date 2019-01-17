@@ -111,12 +111,12 @@ export default class header extends React.Component {
           </a>
           <ul id="" className="hide-on-medium-and-down">
             <LinkItem to='/' label='Home' className='navbar-link' />
-            <LinkItem to='/page-2' label='About' className='navbar-link' />
+            <LinkItem to='/get-in-touch' label='Our Work' className='navbar-link' />
             <LinkItem to='/page-2' label='Services' className='navbar-link' />
           </ul>
           <ul className="right hide-on-medium-and-down">
-            <LinkItem to='/page-2' label='Contact Us' className='navbar-link' />
-            <LinkItem to='/page-2' label='Estimate' className='navbar-link estimate-btn green-bg white-text' />
+            <LinkItem to='/page-2' label='What We Do' className='navbar-link' />
+            <LinkItem to='/get-in-touch' label='Get In Touch' className='navbar-link estimate-btn green-bg white-text' />
           </ul>
         </div>
       </nav>

@@ -71,3 +71,6 @@
   animation: bottombouncing 1s;
   opacity: 1;
 }
+.relative {
+  position: relative;
+}
