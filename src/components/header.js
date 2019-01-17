@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 import { LinkItem } from './sharedui';
 
-import 'materialize-css';
+if (typeof window !== `undefined`) import 'materialize-css';
 import '../assets/css/navbar.css';
 
 export default class header extends React.Component {
