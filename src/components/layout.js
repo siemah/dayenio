@@ -1,9 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+if( typeof window !== `undefined`) {
 import $ from 'jquery';
 
 import 'materialize-css/dist/css/materialize.min.css';
+
+}
 
 
 import Header from './header'
