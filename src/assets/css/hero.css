@@ -1,0 +1,42 @@
+.hero {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hero .left-section,
+.hero .right-section {
+  background-color: var(--blue-color);
+  height: 90vh;
+  padding-top: 5rem;
+}
+
+.hero .left-section ul,
+.hero .left-section .before-after-content,
+.hero .left-section p {
+  color: #ffffff;
+}
+.hero .left-section .before-after-content::after {
+  background-color: #ffffff;
+}
+ 
+.hero .left-section ul li {
+  position: relative;
+}
+.hero .left-section ul li::before,
+.hero .left-section ul li::after {
+  content: '>';
+  position: absolute;
+  left: -22px;
+  top: 0px;
+}
+.hero .left-section ul li::after {
+  content: '_';
+  left: -15px;
+  top: -2px;
+}
+
+.hero .right-section ul,
+.hero .right-section .before-after-content,
+.hero .right-section p{
+  color: var(--blue-color);
+}

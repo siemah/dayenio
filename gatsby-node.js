@@ -5,6 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+<<<<<<< HEAD
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
   if (stage === "build-html") {
     actions.setWebpackConfig({
@@ -19,3 +20,5 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     })
   }
 }
+=======
+>>>>>>> Finished a get in touch but contact form donsnt work yet

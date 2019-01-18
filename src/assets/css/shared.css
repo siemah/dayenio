@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
   --white-color: #ffffff;
   --black-color: #454545;
@@ -73,4 +74,113 @@
 }
 .relative {
   position: relative;
+=======
+:root{
+  --white-color: #ffffff;
+  --black-color: #454545;
+  --font-family: 'Varela Round', sans-serif;
+  --blue-color: #4a00d8;
+} 
+* {
+  font-family: var(--font-family) !important;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 60px;
+  animation: slideDown .5s;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: top .5s;
+}
+.fixed-top + .fixed-fake {
+  display: block;
+  height: 60px;
+  width: 100px;
+}
+@keyframes slideDown {
+  0%{
+    top: -80px;
+  } 
+  100% {
+    top: 0;
+  }
+}
+
+
+.before-after-content {
+  position: relative;
+}
+.before-after-content::before, 
+.before-after-content::after {
+  content: attr(data-content);
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-left: 15px;
+  animation: leftbouncing .7s;
+  font-weight: normal;
+}
+.before-after-content::after {
+  content: '';
+  margin-left: 0;
+  left: 0px;
+  top: -35px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--blue-color);
+  animation: rightbouncing .7s;
+}
+
+.anime {
+  position: relative;
+  opacity: 0;
+}
+.anime-from-down {
+  animation: bottombouncing 1s;
+  opacity: 1;
+}
+.relative {
+  position: relative;
+}
+
+.cover-parent {
+  position: absolute;
+  top: 0%;
+  left: 0.75rem;
+  right: 0%;
+  bottom: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.cover-parent .child-container {
+  position: absolute;
+  top: 50% !important;
+  left: 50% !important;
+  right: 50% !important;
+  bottom: 50% !important;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+}
+.shadow {
+  background-color: #454545 !important;
+  background-color: rgba(45, 45, 45, .7) !important;
+>>>>>>> Finished a get in touch but contact form donsnt work yet
 }
