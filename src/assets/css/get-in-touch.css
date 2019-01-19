@@ -121,3 +121,8 @@ textarea:not(.browser-default):focus:not([readonly]) {
 .get-in-touch-page .main-footer {
   padding-top: 0 !important;
 }
+
+.get-in-touch-page .paroles,
+.get-in-touch-page .citation {
+  font-size: 15px;
+}

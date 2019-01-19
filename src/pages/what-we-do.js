@@ -1,12 +1,31 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'gatsby';
 
+import { Container, Button } from 'react-materialize';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/hero';
+import ServiceItem from '../components/serviceItem';
+import ImageIcon from '../components/imageIcon';
 
-//import '../assets/css/what-we-do.css';
-import mobile from '../assets/images/mobile.svg'
+import mysql from '../assets/images/logos/mysql.svg';
+import nodejs from '../assets/images/logos/nodejs.svg';
+import js from '../assets/images/logos/js.svg';
+import reactjs from '../assets/images/logos/reactjs.svg';
+import expressjs from '../assets/images/logos/expressjs.svg';
+import php from '../assets/images/logos/php.svg';
+import android from '../assets/images/logos/android.svg';
+import ios from '../assets/images/logos/ios.svg';
+import photoshop from '../assets/images/logos/photoshop.svg';
+import laravel from '../assets/images/logos/laravel.svg';
+import python from '../assets/images/logos/python.svg';
+import html from '../assets/images/logos/html.svg';
+import bootstrap from '../assets/images/logos/bootstrap.svg';
+import mongodb from '../assets/images/logos/mongodb.svg';
+import webpack from '../assets/images/logos/webpack.svg';
+import wordpress from '../assets/images/logos/wordpress.svg';
 
+import '../assets/css/what-we-do.css';
 
 export default props => {
 
@@ -28,6 +47,112 @@ export default props => {
       <div className='what-we-do-page'>
         
         <Hero />
+
+        <div className="technos-use grey lighten-5 center">
+
+          <Container>
+            
+            <h2 className='technos-title grey lighten-5 relative'>
+              We use the <strong>right tools</strong> and <strong>technologies </strong> 
+              to achieve the <strong>best products</strong>
+            </h2>
+
+            <div className="techs">
+              <ImageIcon source={mysql} alt='mysql logo' />
+              <ImageIcon source={js} alt='javascript logo' />
+              <ImageIcon source={nodejs} alt='nodejs logo' />
+              <ImageIcon source={reactjs} alt='reactjs logo' />
+              <ImageIcon source={expressjs} alt='expressjs logo' />
+              <ImageIcon source={php} alt='php logo' />
+              <ImageIcon source={android} alt='android logo' />
+              <ImageIcon source={ios} alt='ios logo' />
+              <ImageIcon source={photoshop} alt='photoshop logo' className='photoshop' />
+              <ImageIcon source={laravel} alt='laravel logo' />
+              <ImageIcon source={python} alt='python logo' />
+              <ImageIcon source={html} alt='html logo' />
+              <ImageIcon source={bootstrap} alt='bootstrap logo' />
+              <ImageIcon source={mongodb} alt='mongodb logo' />
+              <ImageIcon source={webpack} alt='webpack logo' />
+              <ImageIcon source={wordpress} alt='wordpress logo' />
+            </div>
+
+          </Container>
+
+        </div>
+
+        <Container className='services'>
+
+          <ServiceItem
+            number='1'
+            title='Hire membre/s of our team'
+            description={`You need a developer (front-end, back-end or full-stack), designer or our team, 
+            so you are at the right place. We can work to help your brand/agency to grow up & reach more costumers.
+            We work remotly or on office it depend to you & your entreprise.`}
+            />
+
+
+          <ServiceItem
+            number='2'
+            title='Build Web application &amp; website'
+            description={`We build websites that make an impact and create true Internet Presence.
+            From responsive websites, content management systems to enterprise builds, 
+            we provide full stack development to meet any creative and technological requirements. 
+            The result is a better user experience, accessibility and enhanced brand recognition for our customers.`}
+            />
+
+          <ServiceItem
+            number='3'
+            title='Ecommerce'
+            description={`If your Web presence requires eCommerce, we will guide you to the right solution.
+            We have years of experience working with a variety of platforms, including woocommerce,
+            and will recommend the best platform based on your budget and requirements. 
+            Or maybe hire a on or more than on developer of our team to help you & will build your product
+            to enhance your agency or brand & to grow up.`}
+            />
+
+          <ServiceItem
+            number='4'
+            title='Mobile Apps'
+            description={`We make Android & IOS applications. We take your idea (no matter how crazy) 
+            and build it into a stunning mobile application that your users will love.
+            Our focus is on product driven apps (apps that do something) rather 
+            than campaign driven apps (apps that sell something). `}
+          />
+
+          <ServiceItem
+            number='5'
+            title='Concepting & Strategy'
+            description={`There are numerous reasons why we’ve had multiple apps featured in app store. 
+            Probably one of the biggest is the solid design behind everything we do. In a crowded marketplace, 
+            the perfect design will help your product stand out. It’s the first touchpoint you’ll have
+             with users, and it’s important to make it count. `}
+          />
+
+          <ServiceItem
+            number='6'
+            title='Design & UI/UX'
+            className='mb-0'
+            description={`ogos are certainly a strong, symbolic asset for any brand. 
+            At the same time, a logo isn’t the only way to define an organisation. 
+            Visual language, such as colours, graphics, imagery, 
+            typography & tone-of-voice all culminate in creating a 
+            consistent and cohesive identity that will communicate 
+            your values, positioning and personality.We temper our belief in change with 
+            a conviction that it must be carefully managed. 
+            We study the options. We identify precisely where you need to go. 
+            Then, and only then, do we look at ways of getting you there.`}
+          />
+
+        </Container>
+
+        <div className="get-started center">
+          <p>
+            Let grow up and join the flux of revolution together.
+          </p>
+          <Button className='z-depth-0'>
+            <Link to='/get-in-touch'>Join &amp; get started</Link>
+          </Button>
+        </div>
 
       </div>
 

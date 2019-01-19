@@ -1,0 +1,22 @@
+.service-item {
+  border-bottom: 1px solid #d0d0d0; 
+  margin-top: 3rem;
+}
+
+.service-item .service-index {
+  font-size: 60px;
+  font-weight: bold;
+  color: #d0d0d0;
+  margin-bottom: 20px;
+  padding: 20px .5rem;
+}
+
+.service-item .service-title {
+  font-size: 24px;
+  color: #454545;
+}
+
+.service-item .service-description {
+  font-style: 17px;
+  color: #888888;
+}

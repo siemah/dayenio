@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.hero ul li {
+  font-size: 17px ;
+}
+
 .hero .left-section,
 .hero .right-section {
   background-color: var(--blue-color);
@@ -19,9 +23,6 @@
   background-color: #ffffff;
 }
  
-.hero .left-section ul li {
-  position: relative;
-}
 .hero .left-section ul li::before,
 .hero .left-section ul li::after {
   content: '>';
@@ -39,4 +40,31 @@
 .hero .right-section .before-after-content,
 .hero .right-section p{
   color: var(--blue-color);
+}
+
+.hero .right-section ul li::before,
+.hero .right-section ul li::after {
+  content: '✎';
+  position: absolute;
+  left: -22px;
+  top: 0px;
+  color: var(--blue-color);
+}
+
+@media only screen and (max-width: 720px),
+screen and (max-height: 400px) {
+  .hero h2 {
+    font-size: 25px !important;
+    margin-bottom: 10px;
+  }
+  .hero .left-section,
+  .hero .right-section {
+    height: 100%;
+    padding-bottom: 20px;
+  }
+  .hero p,
+  .hero ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 }

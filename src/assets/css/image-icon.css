@@ -1,0 +1,11 @@
+.image-icon-container {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+  padding: 0;
+}
+
+.image-icon-container.photoshop {
+  background-color: #2ec4f8;
+}

@@ -78,7 +78,7 @@ export default props => {
                   <h2><span>Contact</span> DayenIO.</h2>
                 </Row>
                 <Row>
-                  <Input s={12} m={6} ref={fnameRef} name='fname' label="Full Name*" />
+                  <Input s={12} m={6} ref={fnameRef} autoFocus='on' name='fname' label="Full Name*" />
                   <Input s={12} m={6} ref={emailRef} name='email' type="email" label="Email*" />
                   <Input s={12} m={6} ref={telRef} name='tel' type='tel' label="Phone*" />
                   <Input s={12} m={6} ref={subjectRef} name='subject' label="Subject*" />

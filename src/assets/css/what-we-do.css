@@ -1,0 +1,35 @@
+.technos-use {
+  padding: 40px 0;
+} 
+.technos-use .technos-title {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.technos-use .technos-title strong {
+  color: var(--blue-color);
+}
+
+.get-started {
+  background-color: #fc3f3f;
+  background: linear-gradient(138.82deg,#4a00d8,#fc3f3f 99.98%);
+  padding: 40px 0;
+}
+
+.get-started p,
+.get-started button a {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.get-started button {
+  padding: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  height: auto;
+}
+.get-started button a {
+  display: block;
+  padding: 5px 20px;
+  background-color: #4a00d8;
+}
