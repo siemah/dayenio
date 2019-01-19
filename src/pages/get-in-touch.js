@@ -46,10 +46,10 @@ export default props => {
         <Row className='mb-0'>
 
           <Col s={12} l={5} className='left-section white'>
-            <Container>
+            <Container className="anime-slideUp">
 
-                <h2 className='before-after-content' data-content='GET IN TOUCH'>
-                  <span>Start the </span> Conversation.
+              <h2 className='before-after-content' data-content='GET IN TOUCH'>
+                <span>Start the </span> Conversation.
               </h2>
                 <p>
                   Every beautiful relationship starts with a <strong>simple hello</strong>.

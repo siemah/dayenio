@@ -5,7 +5,7 @@ import '../assets/css/service-item.css'
 
 export default ({number, title, description, className, ...props}) => {
   return (
-    <Row className={`service-item relative anime anime-from-down ${className || ''}`} {...props}>
+    <Row className={`service-item relative js-anime anime ${className || ''}`} {...props}>
       <Col s={12} l={2} className='service-index'>
         { number }
       </Col>
