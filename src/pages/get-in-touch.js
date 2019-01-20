@@ -89,7 +89,7 @@ export default props => {
                 </Row>
                 <Row className='phone-contact'>
                   <div className='col s12 m6'>
-                    <img src={mobile} alt="mobile image"/>
+                    <img src={mobile} alt="mobile device"/>
                     Or just pick up the phone.
                   </div>
                   <div className='col s12 m6'>

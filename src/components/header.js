@@ -2,9 +2,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import debounce from 'lodash.debounce';
-import PropTypes from 'prop-types'
-
 import { LinkItem } from './sharedui';
 
 //import 'materialize-css';
@@ -32,7 +29,7 @@ const header = props => {
     <nav className='top-navbar z-depth-0' id='main-menu'>
       <div className="nav-wrapper">
         <Link to="/" className="brand-logo">DAYENIO</Link>
-          <a href="#" aria-labelledby='main-menu' onClick={_onClickMobileBtn}  id='btn-mobile' className="btn-mobile-menu js-mobile-menu-trigger" role="button">
+          <a href="#main-menu" aria-labelledby='main-menu' onClick={_onClickMobileBtn}  id='btn-mobile' className="btn-mobile-menu js-mobile-menu-trigger" role="button">
           <span></span>
         </a>
         <ul id="" className="hide-on-medium-and-down">
@@ -41,7 +38,7 @@ const header = props => {
           <LinkItem to='/page-2' label='Services' className='navbar-link' />
         </ul>
         <ul className="right hide-on-medium-and-down">
-          <LinkItem to='/page-2' label='What We Do' className='navbar-link' />
+          <LinkItem to='/page-2' label='' className='navbar-link' />
           <LinkItem to='/get-in-touch' label='Get In Touch' className='navbar-link estimate-btn green-bg white-text' />
         </ul>
       </div>

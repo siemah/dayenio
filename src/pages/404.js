@@ -12,10 +12,10 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
     <Container className="page-404 center">
-      <img src={http404} alt='404 image' />
+      <img src={http404} alt='404 not found' />
       <p>Oops! This page is no longer here.</p>
       <Button id="btn">
-        <Link to='/' title="Home page">
+        <Link to='/' title="DayenIO home page">
           take me to the home page
         </Link>
       </Button>

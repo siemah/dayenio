@@ -19,6 +19,7 @@ body {
   font-size: 55px;
   font-family: var(--font-family);
   color: #121212;
+  font-weight: 600 !important;
 }
 .full-width-disapear {
   position: absolute;

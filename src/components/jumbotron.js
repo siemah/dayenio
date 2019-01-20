@@ -23,7 +23,7 @@ export default class Jumbotron extends React.Component {
       let badge = document.querySelector('.badge.slideup');
       if (badge) {
         let index = parseInt(badge.getAttribute('data-index'));
-        let timeId = setTimeout(() => {
+        setTimeout(() => {
           let badge = document.querySelector('.badge.slideup');
           if (badge) {
             index = index < 3 ? (index + 1) : 0;

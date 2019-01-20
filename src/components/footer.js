@@ -47,7 +47,7 @@ export default class Footer extends React.Component {
 
 
   /**
-   * fired when user scroll
+   * fired when user scroll after 200ms for performance
    * @param {DOMEvent} e domevevtn object 
    */
   _onScroll() {
@@ -63,9 +63,7 @@ export default class Footer extends React.Component {
         }
       });
 
-      //sessionStorage.__last_parallax_scrollY = sessionStorage.__last_parallax_scrollY || 0;
-
-
+      // parallax efect at home page
       if (parallaxNode && parallaxNodeLeft && window.innerWidth > 600 && this.isOnViewport(parallaxNode)) {
 
         if (window.scrollY > parseInt(sessionStorage.__last_scrollY)) {
@@ -81,11 +79,11 @@ export default class Footer extends React.Component {
         }
 
       }
+
+      // show top navbar when user scroll up
       let navbarElem = document.querySelector('.top-navbar');
       let currentClasses = navbarElem.className;
       let scrollY = window.scrollY;
-      let styledElem = navbarElem.style;
-      //console.log("scroll")
       if (
         sessionStorage.__last_scrollY > scrollY &&
         !~currentClasses.indexOf(' fixed-top')
@@ -99,6 +97,15 @@ export default class Footer extends React.Component {
       }
       sessionStorage.__last_scrollY = scrollY;
 
+      // show fading element 
+      let _fadingNodes = document.querySelectorAll('.js-fading');
+      _fadingNodes.forEach((nodeElem) => {
+        if (this.isOnViewport(nodeElem, false)) {
+          nodeElem.className += ' anime-fading';
+          nodeElem.className = nodeElem.className.replace('js-fading', '');
+        }
+      });
+
     }
   }
 
@@ -109,14 +116,14 @@ export default class Footer extends React.Component {
     if (typeof window !== `undefined`) {
       window.addEventListener('load', e => {
         sessionStorage.__last_scrollY = window.scrollY;
-      })
+        window.addEventListener("scroll", e => this.emitDebounce(e));
+      });
     }
   }
 
   componentDidMount = () => {
     if (window !== undefined) {
       this._onLoad();
-      window.addEventListener("scroll", e => this.emitDebounce(e));
     }
   }
 

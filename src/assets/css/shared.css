@@ -45,9 +45,13 @@
     top: 0;
   }
 }
-.anime-dafing {
+
+.anime-fading {
   animation: fading .5s;
+  opacity: 1 !important;
+  animation-delay: .2s;
 }
+
 @keyframes fading {
   from {opacity: 0;}
   to{opacity: 1;}
@@ -78,11 +82,14 @@
   content: '';
   margin-left: 0;
   left: 0px;
-  top: -35px;
+  top: -25px;
   width: 40px;
   height: 3px;
   background-color: var(--blue-color);
   animation: rightbouncing .7s;
+}
+h1.before-after-content::after {
+  top: -15px;
 }
 
 .anime {
@@ -128,4 +135,13 @@ nav ul li a {
 }
 h3 {
   font-size: 24px !important;
+}
+
+
+
+/*********************************
+  JS CLASSES USED FOR ANIMATION
+*********************************/
+.opacity-0 {
+  opacity: 0;
 }

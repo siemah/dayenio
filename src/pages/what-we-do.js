@@ -52,28 +52,28 @@ export default props => {
 
           <Container>
             
-            <h2 className='technos-title grey lighten-5 relative'>
+            <h2 className='technos-title grey lighten-5 relative anime js-anime'>
               We use the <strong>right tools</strong> and <strong>technologies </strong> 
               to achieve the <strong>best products</strong>
             </h2>
 
             <div className="techs">
-              <ImageIcon source={mysql} alt='mysql logo' />
-              <ImageIcon source={js} alt='javascript logo' />
-              <ImageIcon source={nodejs} alt='nodejs logo' />
-              <ImageIcon source={reactjs} alt='reactjs logo' />
-              <ImageIcon source={expressjs} alt='expressjs logo' />
-              <ImageIcon source={php} alt='php logo' />
-              <ImageIcon source={android} alt='android logo' />
-              <ImageIcon source={ios} alt='ios logo' />
-              <ImageIcon source={photoshop} alt='photoshop logo' className='photoshop' />
-              <ImageIcon source={laravel} alt='laravel logo' />
-              <ImageIcon source={python} alt='python logo' />
-              <ImageIcon source={html} alt='html logo' />
-              <ImageIcon source={bootstrap} alt='bootstrap logo' />
-              <ImageIcon source={mongodb} alt='mongodb logo' />
-              <ImageIcon source={webpack} alt='webpack logo' />
-              <ImageIcon source={wordpress} alt='wordpress logo' />
+              <ImageIcon className='js-fading opacity-0' source={mysql} alt='mysql logo' />
+              <ImageIcon className='js-fading opacity-0' source={js} alt='javascript logo' />
+              <ImageIcon className='js-fading opacity-0' source={nodejs} alt='nodejs logo' />
+              <ImageIcon className='js-fading opacity-0' source={reactjs} alt='reactjs logo' />
+              <ImageIcon className='js-fading opacity-0' source={expressjs} alt='expressjs logo' />
+              <ImageIcon className='js-fading opacity-0' source={php} alt='php logo' />
+              <ImageIcon className='js-fading opacity-0' source={android} alt='android logo' />
+              <ImageIcon className='js-fading opacity-0' source={ios} alt='ios logo' />
+              <ImageIcon className='js-fading opacity-0' source={photoshop} alt='photoshop logo' className='photoshop' />
+              <ImageIcon className='js-fading opacity-0' source={laravel} alt='laravel logo' />
+              <ImageIcon className='js-fading opacity-0' source={python} alt='python logo' />
+              <ImageIcon className='js-fading opacity-0' source={html} alt='html logo' />
+              <ImageIcon className='js-fading opacity-0' source={bootstrap} alt='bootstrap logo' />
+              <ImageIcon className='js-fading opacity-0' source={mongodb} alt='mongodb logo' />
+              <ImageIcon className='js-fading opacity-0' source={webpack} alt='webpack logo' />
+              <ImageIcon className='js-fading opacity-0' source={wordpress} alt='wordpress logo' />
             </div>
 
           </Container>

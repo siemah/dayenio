@@ -9,3 +9,13 @@
 .image-icon-container.photoshop {
   background-color: #2ec4f8;
 }
+
+@media only screen and (max-width: 750px) {
+  .image-icon-container {
+    height: 50px;
+    width: 50px;
+  }
+  .image-icon-container img {
+    height: 100%;
+  }
+}
