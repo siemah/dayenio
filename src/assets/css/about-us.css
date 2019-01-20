@@ -1,0 +1,88 @@
+.hero-quote {
+  background-color: var(--blue-color); 
+}
+.quote-container { 
+  padding: 50px 0;
+  color: #ffffff !important;
+}
+
+.quote-container h1{
+  font-size: 50px;
+}
+
+.quote-container p{
+  font-size: 20px;
+}
+
+
+.team-numbers .left-section {
+  padding: 50px;
+  background-color: #151515;
+  height: 400px;
+}
+.team-numbers .left-section .content-item {
+  border: 2px dotted #ffffff;
+  padding: 25px;
+  height: 100%;
+}
+
+.team-numbers .left-section .content-item .question,
+.team-numbers .left-section .content-item .answers {
+  font-size: 17px !important;
+  font-weight: 600;
+}
+.team-numbers .left-section .content-item .answers {
+  font-weight: 400;
+}
+
+.team-numbers .right-section .col {
+  height: 200px;
+  line-height: 50%;
+}
+.team-numbers .right-section .even {
+  background-color: var(--blue-color);
+}
+.team-numbers .right-section .col div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.team-numbers .right-section .col div span {
+  font-size: 40px;
+  font-weight: 600;
+}
+.team-numbers .right-section .col div h4 {
+  font-weight: 400;
+  font-size: 20px; 
+  margin-top: 30px;
+  position: relative;
+}
+.team-numbers .right-section .col div h4::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -16px;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 50px;
+  background-color: #ea3b3b;
+}
+
+@media only screen and (min-width: 1080px) {
+  .team-numbers .left-section {
+    height: 600px;
+  }
+  .team-numbers .right-section .col {
+    height: 300px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .quote-container h1{
+    font-size: 35px;
+  }
+  .quote-container p{
+    font-size: 17px;
+  }
+}

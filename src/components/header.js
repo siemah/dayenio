@@ -35,10 +35,10 @@ const header = props => {
         <ul id="" className="hide-on-medium-and-down">
           <LinkItem to='/' label='Home' className='navbar-link' />
           <LinkItem to='/what-we-do' label='What We Do' className='navbar-link' />
-          <LinkItem to='/page-2' label='Services' className='navbar-link' />
+          <LinkItem to='/our-works' label='Our works' className='navbar-link' />
         </ul>
         <ul className="right hide-on-medium-and-down">
-          <LinkItem to='/page-2' label='' className='navbar-link' />
+          <LinkItem to='/about-us' label='About Us' className='navbar-link' />
           <LinkItem to='/get-in-touch' label='Get In Touch' className='navbar-link estimate-btn green-bg white-text' />
         </ul>
       </div>

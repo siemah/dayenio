@@ -7,6 +7,7 @@ import SEO from '../components/seo';
 import Hero from '../components/hero';
 import ServiceItem from '../components/serviceItem';
 import ImageIcon from '../components/imageIcon';
+import GetStarted from '../components/get-started';
 
 import mysql from '../assets/images/logos/mysql.svg';
 import nodejs from '../assets/images/logos/nodejs.svg';
@@ -145,14 +146,7 @@ export default props => {
 
         </Container>
 
-        <div className="get-started center">
-          <p>
-            Let grow up and join the flux of revolution together.
-          </p>
-          <Button className='z-depth-0'>
-            <Link to='/get-in-touch'>Join &amp; get started</Link>
-          </Button>
-        </div>
+        <GetStarted />
 
       </div>
 

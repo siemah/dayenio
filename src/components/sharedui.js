@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export const LinkItem = ({ containerClass, to, label, alt, className, Children, ...restProps}) => {
+export const LinkItem = ({ containerClass, to, label, alt, className, Children, ...props}) => {
   return (
     <li className={containerClass || ''}>
-      <Link to={"/"+to} alt={alt || ''}className={className}>{label}</Link>
+      {
+        <Link to={"/" + to} alt={alt || ''} className={className} {...props}>{label}</Link>
+      }
     </li>
   )
 }
