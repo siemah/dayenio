@@ -52,6 +52,8 @@ export default class Footer extends React.Component {
    */
   _onScroll() {
     if (window !== undefined) {
+      console.log("scroll event")
+
       let animeNodes = document.querySelectorAll('.js-anime');
       let parallaxNode = document.querySelector('.js-parallax.right-section');
       let parallaxNodeLeft = document.querySelector('.js-parallax.left-section');
@@ -115,6 +117,7 @@ export default class Footer extends React.Component {
   _onLoad = () => {
     if (typeof window !== `undefined`) {
       window.addEventListener('load', e => {
+        console.log("inside load event")
         sessionStorage.__last_scrollY = window.scrollY;
         window.addEventListener("scroll", e => this.emitDebounce(e));
       });
@@ -122,7 +125,8 @@ export default class Footer extends React.Component {
   }
 
   componentDidMount = () => {
-    if (window !== undefined) {
+    if (typeof window !== `undefined`) {
+      console.log("before load event")
       this._onLoad();
     }
   }

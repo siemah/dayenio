@@ -225,3 +225,14 @@ body {
     top: 0; 
   }
 }
+
+@media only screen and (max-height: 450px) {
+  .jumbotron .scroll-indicator {
+    bottom: 0;
+  }
+}
+@media only screen and (max-height: 380px) {
+  .jumbotron .scroll-indicator {
+    display: none;
+  }
+}
