@@ -10,10 +10,10 @@ import twitter from '../assets/images/twitter.svg';
 import envelope from '../assets/images/envelope.svg'; 
 import smartphone from '../assets/images/smartphone.svg'; 
 import problem from '../assets/images/problem.svg'; 
-import { Parallax } from 'materialize-css';
 
 import '../assets/css/footer.css';
 
+import { Parallax } from 'materialize-css';
 export default class Footer extends React.Component {
 
   constructor(props) {
