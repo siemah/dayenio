@@ -13,7 +13,6 @@ import problem from '../assets/images/problem.svg';
 
 import '../assets/css/footer.css';
 
-import { Parallax } from 'materialize-css';
 export default class Footer extends React.Component {
 
   constructor(props) {
@@ -46,68 +45,86 @@ export default class Footer extends React.Component {
     }
   }
 
+  slideUpElements = () => {
+
+    let animeNodes = document.querySelectorAll('.js-anime');
+
+    animeNodes.forEach(nodeElem => {
+      if (this.isOnViewport(nodeElem, true)) {
+        nodeElem.className += ' anime-from-down';
+        nodeElem.className = nodeElem.className.replace(' js-anime', '')
+      }
+    });
+
+  }
+
+  indexParallaxeInverse = () => {
+
+    let parallaxNode = document.querySelector('.js-parallax.right-section');
+    let parallaxNodeLeft = document.querySelector('.js-parallax.left-section');
+    let scrollY = window.scrollY;    
+    if (parallaxNode && parallaxNodeLeft && window.innerWidth > 600 && this.isOnViewport(parallaxNode)) {
+      console.log('index page parallaxe session: %f, windowSrool %f', parseInt(sessionStorage.__parallaxe_scrollY), scrollY );
+      if (scrollY > parseInt(sessionStorage.__parallaxe_scrollY)) {
+        let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
+        let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
+        parallaxNode.style.top = `${parseInt(lastTop) + 5}px`;
+        parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) - 5}px`;
+      } else if (scrollY < parseInt(sessionStorage.__parallaxe_scrollY)) {
+        let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
+        let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
+        parallaxNode.style.top = `${parseInt(lastTop) - 5}px`;
+        parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) + 5}px`;
+      }
+      sessionStorage.__parallaxe_scrollY = scrollY;
+    }
+  }
 
   /**
    * fired when user scroll after 200ms for performance
    * @param {DOMEvent} e domevevtn object 
    */
   _onScroll() {
-    if (window !== undefined) {
-      let animeNodes = document.querySelectorAll('.js-anime');
-      let parallaxNode = document.querySelector('.js-parallax.right-section');
-      let parallaxNodeLeft = document.querySelector('.js-parallax.left-section');
-
-      animeNodes.forEach(nodeElem => {
-        if (this.isOnViewport(nodeElem, true)) {
-          nodeElem.className += ' anime-from-down';
-          nodeElem.className = nodeElem.className.replace(' js-anime', '')
-        }
-      });
-
+    if (typeof window !== `undefined`) {
+      // aniate some element from bottom (like element in slider showed from bottom )
+      this.slideUpElements();
       // parallax efect at home page
-      if (parallaxNode && parallaxNodeLeft && window.innerWidth > 600 && this.isOnViewport(parallaxNode)) {
-
-        if (window.scrollY > parseInt(sessionStorage.__last_scrollY)) {
-          let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
-          let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
-          parallaxNode.style.top = `${parseInt(lastTop) + 8}px`;
-          parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) - 8}px`;
-        } else {
-          let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
-          let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
-          parallaxNode.style.top = `${parseInt(lastTop) - 8}px`;
-          parallaxNodeLeft.style.top = `${parseInt(lastTopLeft) + 8}px`;
-        }
-
-      }
-
-      // show top navbar when user scroll up
-      let navbarElem = document.querySelector('.top-navbar');
-      let currentClasses = navbarElem.className;
-      let scrollY = window.scrollY;
-      if (
-        sessionStorage.__last_scrollY > scrollY &&
-        !~currentClasses.indexOf(' fixed-top')
-      ) {
-        navbarElem.className += ' fixed-top';
-      } else if (
-        sessionStorage.__last_scrollY < scrollY &&
-        currentClasses.indexOf(' fixed-top')
-      ) {
-        navbarElem.className = currentClasses.replace(' fixed-top', '');
-      }
-      sessionStorage.__last_scrollY = scrollY;
-
+      this.indexParallaxeInverse();
+      // show top navbar when user scroll to top of window
+      this.showTopNavbar();
       // show fading element 
-      let _fadingNodes = document.querySelectorAll('.js-fading');
-      _fadingNodes.forEach((nodeElem) => {
-        if (this.isOnViewport(nodeElem, false)) {
-          nodeElem.className += ' anime-fading';
-          nodeElem.className = nodeElem.className.replace('js-fading', '');
-        }
-      });
-
+      this.showFidingElements();
     }
+  }
+
+  showTopNavbar = () => {
+
+    // show top navbar when user scroll up
+    let navbarElem = document.querySelector('.top-navbar');
+    let currentClasses = navbarElem.className;
+    let scrollY = window.scrollY;
+    if (
+      sessionStorage.__last_scrollY > scrollY &&
+      !~currentClasses.indexOf(' fixed-top')
+    ) {
+      navbarElem.className += ' fixed-top';
+    } else if (
+      sessionStorage.__last_scrollY < scrollY &&
+      currentClasses.indexOf(' fixed-top')
+    ) {
+      navbarElem.className = currentClasses.replace(' fixed-top', '');
+    }
+    sessionStorage.__last_scrollY = scrollY;
+  }
+
+  showFidingElements = () => {
+    let _fadingNodes = document.querySelectorAll('.js-fading');
+    _fadingNodes.forEach((nodeElem) => {
+      if (this.isOnViewport(nodeElem, false)) {
+        nodeElem.className += ' anime-fading';
+        nodeElem.className = nodeElem.className.replace('js-fading', '');
+      }
+    });
   }
 
   /**
@@ -115,18 +132,17 @@ export default class Footer extends React.Component {
      */
   _onLoad = () => {
     if (typeof window !== `undefined`) {
-      window.addEventListener('load', e => {
-        sessionStorage.__last_scrollY = window.scrollY;
-        window.addEventListener("scroll", e => this.emitDebounce(e));
-      });
+      sessionStorage.__last_scrollY = window.scrollY; 
+      sessionStorage.__parallaxe_scrollY = window.scrollY; 
+      window.addEventListener("scroll", e => this.emitDebounce(e));
     }
   }
 
   componentDidMount = () => {
     if (window !== undefined) {
       this._onLoad();
-      var elems = document.querySelectorAll('.parallax');
-      Parallax.init(elems);
+      //var elems = document.querySelectorAll('.parallax');
+      //Parallax.init(elems);
     }
   }
 

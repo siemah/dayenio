@@ -23,7 +23,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-materialize": "^2.6.0"
+    "react-materialize": "^2.6.0",
+    "react-parallax": "^2.1.0"
   },
   "keywords": [
     "gatsby"
@@ -48,5 +49,12 @@
   },
   "resolutions": {
     "sharp": "0.21.1"
-  }
+  },
+  "browserslist": [
+    "Opera >= 11.5",
+    "last 5 versions", 
+    "Safari >= 5", 
+    "IE >= 9", 
+    "Firefox >= 45"
+  ]
 }

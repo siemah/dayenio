@@ -1,12 +1,15 @@
 
 import React from 'react'
-import 'jquery';
 
+import { Parallax } from 'react-parallax'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import img from '../assets/images/office-work.jpg';
-import '../assets/css/about-us.css'
+import office from '../assets/images/office-work.jpg';
+import '../assets/css/our-works.css'
+import '../assets/css/shared.css'
+import { Container } from 'react-materialize';
+import { CaseItem } from '../components/sharedui';
 
 
 const OurWorksPage = props => (
@@ -23,26 +26,31 @@ const OurWorksPage = props => (
       `react-native freelancer`, 'JAM stack', 'JAM stack freelancer', 'JAM stack developer'
       ]} />
     
-    <div className="our-works-page">
+    <div className="our-works-page grey lighten-5">
 
-      
-      <div>
-        
+      <Container className='custom-container'>
 
-        <div className="parallax-container">
-          <div className="parallax"><img src={img} /></div>
-        </div>
-        <div className="section white">
-          <div className="row container">
-            <h2 className="header">Parallax</h2>
-            <p className="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-          </div>
-        </div>
-        <div className="parallax-container">
-          <div className="parallax"><img src={img} /></div>
-        </div>
+        <h2 className='technos-title relative '>
+          Take a tour and see what we’ve created in the past so we may 
+          <strong>create something together</strong> in the future!
+        </h2>
+        <CaseItem
+          brand='Wellness Inc.'
+          altLogo='wellnessqatar'
+          caseImg={office}
+          logo={office}
+          link='wellnessqatar.com'
+          caseImgAlt='wellnessqatar.com'
+          techs={['html5', 'nodejs', 'mongodb']}
+          caseDescription='Wellness is a Qatar corporation 
+            specialized in healthy and lifestyle.
+            Wellness connect between a fitness, body therapy
+            and healthy food centers with customers by there website
+            wellnessqatar.com. Each customer register can find a banchs of centers 
+            choose and reserve. '
+      />
 
-      </div>
+      </Container>
 
 
     </div>

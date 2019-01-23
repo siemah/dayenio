@@ -1,0 +1,30 @@
+.our-works-page {
+    padding-top: 50px;
+}
+
+.technos-title {
+    font-weight: 400;
+    color: #454545;
+    font-size: 40px;
+}
+.technos-title strong {
+    color: var(--blue-color);
+}
+
+.our-works-page button {
+    background-color: transparent;
+    border-radius: 36px;
+    background-color: var(--blue-color);
+    background-image: linear-gradient(to right, var(--blue-color), #ea3b3b);
+}
+
+.our-works-page button a {
+    display: block;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.our-works-page .case-description {
+    color: #787878
+}
+
