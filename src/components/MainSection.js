@@ -89,7 +89,7 @@ const MainSection = props => {
         
         <div className='right-section js-parallax' data-direction='down'>
           <Button className='z-depth-0'>
-            <Link to='/our-work' alt='See what we build to this brands'>Discover more</Link>
+            <Link to='/our-works' alt='See what we build to this brands'>Discover more</Link>
           </Button>
         </div>
 

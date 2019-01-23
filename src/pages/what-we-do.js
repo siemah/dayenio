@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
-import { Container, Button } from 'react-materialize';
+import { Container } from 'react-materialize';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Hero from '../components/hero';
