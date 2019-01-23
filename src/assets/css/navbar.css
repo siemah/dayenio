@@ -6,8 +6,8 @@ body{
   overflow: hidden;
 }
 .top-navbar {
-  background-color: var(--white-color);
-  color: var(--black-color);
+  background-color: #ffffff;
+  color: #454545;
   height: 65px;
   border-bottom: 1px solid #c5c5c5;
   overflow: hidden;
@@ -22,7 +22,7 @@ body{
   left: 0;
   right: 0;
   height: 5px;
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
 }
 
 .top-navbar #nav-mobile{
@@ -32,18 +32,18 @@ body{
 .top-navbar a,
 .top-navbar a.brand-logo {
   transition: color .3s, background-color .2s;
-  color: var(--black-color);
+  color: #454545;
   font-weight: 600;
-  font-family: var(--font-family);
+  font-family: 'Varela Round', sans-serif;
   height: 100%;
 }
 a.brand-logo {
   left: 50%;
   transform: translateX(-50%);
-  color: var(--blue-color) !important;
+  color: #4a00d8 !important;
 }
 .top-navbar a:hover {
-  color: var(--blue-color);
+  color: #4a00d8;
   background-color: inherit;
 }
 .navbar-link {
@@ -57,7 +57,7 @@ a.brand-logo {
   bottom: -5px;
   left: 0;
   right: 0;
-  background-color: var(--blue-color); 
+  background-color: #4a00d8; 
   height: 5px;
 }
 .navbar-link:hover::before {
@@ -68,18 +68,18 @@ a.brand-logo {
   padding: 0 35px;
 }
 .green-bg {
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
 }
 .top-navbar .green-bg:hover {
-  color: var(--white-color);
-  background-color: var(--blue-color);
+  color: #ffffff;
+  background-color: #4a00d8;
 }
 
 .btn-mobile-menu {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
   width: 65px;
   height: 65px;
   text-align: center;
@@ -89,7 +89,7 @@ a.brand-logo {
   transition: width .2s, height .2s, border-radius .2s !important;
 }
 a.btn-mobile-menu:hover{
-  background-color: var(--blue-color) !important;
+  background-color: #4a00d8 !important;
 }
 .btn-mobile-menu::before,  
 .btn-mobile-menu::after,
@@ -100,7 +100,7 @@ a.btn-mobile-menu:hover{
   top: 20px;
   width: 30px;
   height: 3px;
-  background-color: var(--white-color);
+  background-color: #ffffff;
   border-radius: 10px;
   transition: transform .2s, left .2s, width .2s;
 }  
@@ -166,11 +166,11 @@ a.btn-mobile-menu:hover{
 .fullscreen.btn-mobile-menu + ul.hide-on-medium-and-down + ul.hide-on-medium-and-down.right li a {
   height: 40px;
   line-height: 40px;
-  color: var(--white-color);
+  color: #ffffff;
 }
 .fullscreen.btn-mobile-menu + ul.hide-on-medium-and-down + ul.hide-on-medium-and-down.right li .estimate-btn.green-bg{
-  background-color: var(--white-color);
-  color: var(--blue-color) !important;
+  background-color: #ffffff;
+  color: #4a00d8 !important;
   line-height: 25px;
   height: 50px;
   padding: 10px 15px;

@@ -9,7 +9,7 @@
 
 .hero .left-section,
 .hero .right-section {
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
   height: 90vh;
   padding-top: 5rem;
 }
@@ -39,7 +39,7 @@
 .hero .right-section ul,
 .hero .right-section .before-after-content,
 .hero .right-section p{
-  color: var(--blue-color);
+  color: #4a00d8;
 }
 
 .hero .right-section ul li::before,
@@ -48,7 +48,7 @@
   position: absolute;
   left: -22px;
   top: 0px;
-  color: var(--blue-color);
+  color: #4a00d8;
 }
 
 @media only screen and (max-width: 720px),

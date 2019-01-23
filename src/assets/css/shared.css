@@ -6,7 +6,7 @@
   --blue-color: #4a00d8;
 } 
 * {
-  font-family: var(--font-family) !important;
+  font-family: 'Varela Round', sans-serif !important;
 }
 .mb-0 {
   margin-bottom: 0 !important;
@@ -85,7 +85,7 @@
   top: -25px;
   width: 40px;
   height: 3px;
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
   animation: rightbouncing .7s;
 }
 h1.before-after-content::after {
@@ -94,10 +94,11 @@ h1.before-after-content::after {
 
 .anime {
   position: relative;
-  opacity: 0;
+  opacity: 1;
 }
 .anime-from-down {
-  animation: bottombouncing 1s;
+  animation: bottombouncing .5s;
+  animation-delay: 0;
   opacity: 1;
 }
 .relative {
@@ -143,5 +144,5 @@ h3 {
   JS CLASSES USED FOR ANIMATION
 *********************************/
 .opacity-0 {
-  opacity: 0;
+  opacity: 1;
 }

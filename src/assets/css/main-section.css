@@ -16,7 +16,7 @@
 }
 
 .whatwedo-section .left-section a {
-  color: var(--blue-color);
+  color: #4a00d8;
   display: inline-block;
   position: relative;
   font-size: 15px;
@@ -34,7 +34,7 @@
   bottom: 50%;
   width: 40px;
   height: 2px;
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
   transition: width .5s;
 }
 
@@ -128,8 +128,8 @@
   bottom: 50%;
   border: none;
   transform: translate(-50%, -60%);
-  background-color: var(--blue-color);
-  background-image: linear-gradient(to right, var(--blue-color), #ea3b3b);
+  background-color: #4a00d8;
+  background-image: linear-gradient(to right, #4a00d8, #ea3b3b);
   border-radius: 30px;
   overflow: hidden;
 }

@@ -41,7 +41,7 @@ const AboutPage = props => (
 
       <div className="team-numbers">
         <Row className='mb-0'>
-          <Col s={12} m={6} className="left-section white-text">
+          <Col s={12} l={6} className="left-section white-text">
             <div className='content-item'>
               <h3 className='question'>why you will choosd sdlfk l sqld kf</h3>
               <p className="answers">
@@ -52,7 +52,7 @@ const AboutPage = props => (
               </p>
             </div>
           </Col>
-          <Col s={12} m={6} className="right-section white">
+          <Col s={12} l={6} className="mt-0  right-section white">
             <Row className='mb-0'>
               <Col s={6} className='relative center'>
                 <div>

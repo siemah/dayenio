@@ -3,6 +3,8 @@ import React from 'react'
 import { Link } from 'gatsby';
 import { Button } from 'react-materialize';
 
+import '../assets/css/get-started.css';
+
 export default (props) => (
   <div className="get-started center">
     <p>

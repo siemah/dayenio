@@ -25,7 +25,7 @@ const MainSection = props => {
               like Qatar, Frensh, Algeria and many others countries.
             </p>
             <div>
-              <Link to='/services' >Discover more</Link>
+              <Link to='/what-we-do' >Discover more</Link>
             </div>
           </Col>
           <Col s={12} l={7} className='right-section'>

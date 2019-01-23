@@ -1,5 +1,5 @@
 .hero-quote {
-  background-color: var(--blue-color); 
+  background-color: #4a00d8; 
 }
 .quote-container { 
   padding: 50px 0;
@@ -40,7 +40,7 @@
   line-height: 50%;
 }
 .team-numbers .right-section .even {
-  background-color: var(--blue-color);
+  background-color: #4a00d8;
 }
 .team-numbers .right-section .col div {
   position: absolute;

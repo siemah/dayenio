@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
    */
   isOnViewport = (elem, inViewport = false, lazyLoad = false) => {
     let rect = elem.getBoundingClientRect();
-    if (window !== undefined) {
+    if (typeof window !== `undefined`) {
       if (inViewport)
         return rect.top < (window.innerHeight || document.documentElement.clientHeight) && rect.top >= 0;
       else if (lazyLoad)
@@ -50,6 +50,7 @@ export default class Footer extends React.Component {
     let animeNodes = document.querySelectorAll('.js-anime');
 
     animeNodes.forEach(nodeElem => {
+      //console.log("scrolling", this.isOnViewport(nodeElem, true))
       if (this.isOnViewport(nodeElem, true)) {
         nodeElem.className += ' anime-from-down';
         nodeElem.className = nodeElem.className.replace(' js-anime', '')
@@ -64,7 +65,7 @@ export default class Footer extends React.Component {
     let parallaxNodeLeft = document.querySelector('.js-parallax.left-section');
     let scrollY = window.scrollY;    
     if (parallaxNode && parallaxNodeLeft && window.innerWidth > 600 && this.isOnViewport(parallaxNode)) {
-      console.log('index page parallaxe session: %f, windowSrool %f', parseInt(sessionStorage.__parallaxe_scrollY), scrollY );
+      //console.log('index page parallaxe session: %f, windowSrool %f', parseInt(sessionStorage.__parallaxe_scrollY), scrollY );
       if (scrollY > parseInt(sessionStorage.__parallaxe_scrollY)) {
         let lastTop = window.getComputedStyle(parallaxNode).getPropertyValue('top');
         let lastTopLeft = window.getComputedStyle(parallaxNodeLeft).getPropertyValue('top');
@@ -86,6 +87,7 @@ export default class Footer extends React.Component {
    */
   _onScroll() {
     if (typeof window !== `undefined`) {
+      
       // aniate some element from bottom (like element in slider showed from bottom )
       this.slideUpElements();
       // parallax efect at home page
@@ -139,7 +141,7 @@ export default class Footer extends React.Component {
   }
 
   componentDidMount = () => {
-    if (window !== undefined) {
+    if (typeof window !== `undefined`) {
       this._onLoad();
       //var elems = document.querySelectorAll('.parallax');
       //Parallax.init(elems);

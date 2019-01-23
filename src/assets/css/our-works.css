@@ -8,14 +8,14 @@
     font-size: 40px;
 }
 .technos-title strong {
-    color: var(--blue-color);
+    color: #4a00d8;
 }
 
 .our-works-page button {
     background-color: transparent;
     border-radius: 36px;
-    background-color: var(--blue-color);
-    background-image: linear-gradient(to right, var(--blue-color), #ea3b3b);
+    background-color: #4a00d8;
+    background-image: linear-gradient(to right, #4a00d8, #ea3b3b);
 }
 
 .our-works-page button a {
