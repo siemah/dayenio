@@ -4,15 +4,16 @@ import React from 'react'
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-import office from '../assets/images/office-work.jpg';
 import '../assets/css/our-works.css'
 import '../assets/css/shared.css'
 import { Container } from 'react-materialize';
 import { CaseItem } from '../components/sharedui';
 
+import office from '../assets/images/office-work.jpg';
+import mobile from '../assets/images/mobile.svg';
 
 const OurWorksPage = props => (
-  <Layout >
+  <Layout footerPaddingTop={'mb-0'}>
     <SEO title="DayenIO works" keywords={[
       `dayenio`, `dayenio tech`, `web`, `web application`, `freelance developer`, `developers`, `designers`, `freelance designers`, 
       `make logo`, `build mobile app`, `android`, `ios`, `android app`, `ios app`, `website`, `hire a developer`, `front-end developers`, 
@@ -29,10 +30,11 @@ const OurWorksPage = props => (
 
       <Container className='custom-container'>
 
-        <h2 className='technos-title relative '>
-          Take a tour and see what we’ve created in the past so we may 
+        <h2 className='technos-title relative center'>
+          Take a tour and see what we’ve created in the past so we may &nbsp;
           <strong>create something together</strong> in the future!
         </h2>
+        
         <CaseItem
           brand='Wellness Inc.'
           altLogo='wellnessqatar'
@@ -47,8 +49,25 @@ const OurWorksPage = props => (
             and healthy food centers with customers by there website
             wellnessqatar.com. Each customer register can find a banchs of centers 
             choose and reserve. '
-      />
+         />
 
+        <CaseItem
+          brand='Wellness Inc.'
+          altLogo='wellnessqatar'
+          carouselImages={[{src: office, alt: 'office'}, {src: mobile, alt: 'mobile'}]}
+          logo={office}
+          isCarousel={true}
+          caseImgAlt='wellnessqatar.com'
+          techs={['Photoshop', 'Ilustrator',]}
+          caseDescription='Wellness is a Qatar corporation 
+            specialized in healthy and lifestyle.
+            Wellness connect between a fitness, body therapy
+            and healthy food centers with customers by there website
+            wellnessqatar.com. Each customer register can find a banchs of centers 
+            choose and reserve. '
+         />
+
+        
       </Container>
 
 

@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Row, Col, Button, Chip } from 'react-materialize';
 
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
 
 export const LinkItem = ({ containerClass, to, label, alt, className, Children, ...props}) => {
   return (
@@ -22,8 +25,23 @@ export const SocialContactItem = ({className, href, label, alt, source}) => (
 );
 
 
-export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, techs = []}) => (
-  <Row>
+export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, techs = [], carouselImages = null, ...props}) =>{
+  let getImage = carouselImages ?
+                <Carousel showIndicators={false}>
+                  {
+                    carouselImages.map(img => {
+                      console.log(img.src)
+                      return (
+                        <div key={img.src}>
+                          <img src={img.src} alt={img.alt} />
+                        </div>
+                      )
+                    })
+                  }   
+                </Carousel>:
+                <img src={caseImg} alt={caseImgAlt} />
+return (
+  <Row className='mb-0'>
    
     {
       right? 
@@ -58,9 +76,7 @@ export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, br
 
           </Col>
           <Col m={12} l={6} style={{ height: '500px' }}>
-
-            <img src={caseImg} alt={caseImgAlt} />
-
+            { getImage }
           </Col>
           </>
         )   : 
@@ -68,7 +84,7 @@ export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, br
           <>
             <Col m={12} l={6} style={{ height: '500px' }}>
 
-              <img src={caseImg} alt={caseImgAlt} />
+              {getImage}
 
             </Col>
 
@@ -109,3 +125,4 @@ export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, br
   </Row>
 
 )
+  }

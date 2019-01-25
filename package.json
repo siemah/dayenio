@@ -24,7 +24,8 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-materialize": "^2.6.0",
-    "react-parallax": "^2.1.0"
+    "react-parallax": "^2.1.0",
+    "react-responsive-carousel": "^3.1.46"
   },
   "keywords": [
     "gatsby"
@@ -52,9 +53,9 @@
   },
   "browserslist": [
     "Opera >= 11.5",
-    "last 5 versions", 
-    "Safari >= 5", 
-    "IE >= 9", 
+    "last 5 versions",
+    "Safari >= 5",
+    "IE >= 9",
     "Firefox >= 45"
   ]
 }
