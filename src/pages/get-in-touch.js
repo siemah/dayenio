@@ -71,7 +71,7 @@ export default props => {
             <Container>
               
 
-              <form className='contact-form relative' data-netlify="true" onSubmit={_onSubmit}>
+              <form className='contact-form relative' name="contact" method="POST" data-netlify="true" onSubmit={_onSubmit}>
 
 
                 <Row>
