@@ -71,14 +71,14 @@ export default props => {
             <Container>
               
 
-              <form className='contact-form relative' onSubmit={_onSubmit}>
+              <form className='contact-form relative' data-netlify='true' onSubmit={_onSubmit}>
 
 
                 <Row>
                   <h2><span>Contact</span> DayenIO.</h2>
                 </Row>
                 <Row>
-                  <Input s={12} m={6} ref={fnameRef} autoFocus='on' name='fname' label="Full Name*" />
+                  <Input s={12} m={6} ref={fnameRef} autoFocus='on' name='fullname' label="Full Name*" />
                   <Input s={12} m={6} ref={emailRef} name='email' type="email" label="Email*" />
                   <Input s={12} m={6} ref={telRef} name='tel' type='tel' label="Phone*" />
                   <Input s={12} m={6} ref={subjectRef} name='subject' label="Subject*" />
@@ -97,6 +97,7 @@ export default props => {
                   </div>
                 </Row>
                 <Row>
+                  <div data-netlify-recaptcha="true"></div>
                   <p>
                     This form is protected by Invisible reCAPTCHA
                     (<a href="https://policies.google.com/privacy?hl=en">Privacy</a>,&nbsp;
