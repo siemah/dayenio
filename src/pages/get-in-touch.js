@@ -90,7 +90,7 @@ export default props => {
                 <Row className='phone-contact'>
                   <div className='col s12 m6'>
                     <img src={mobile} alt="mobile device"/>
-                    Or just pick up the phone.
+                    Or just pick up the phone and call us. We are available at whatsapp, telegram and twitter.
                   </div>
                   <div className='col s12 m6'>
                     <a href="tel:+213771356409">+ 213 771 356 409</a>
