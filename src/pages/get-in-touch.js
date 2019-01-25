@@ -70,45 +70,26 @@ export default props => {
 
             <Container>
               
-
-              <form className='contact-form relative' action='/success-form' name="contact" method="POST" data-netlify="true" >
-
-                <Row>
-                  <h2><span>Contact</span> DayenIO.</h2>
-                </Row>
-                <Row>
-                  <Input s={12} m={6} ref={fnameRef} autoFocus='on' name='fname' label="Full Name*" />
-                  <Input s={12} m={6} ref={emailRef} name='email' type="email" label="Email*" />
-                  <Input s={12} m={6} ref={telRef} name='tel' type='tel' label="Phone*" />
-                  <Input s={12} m={6} ref={subjectRef} name='subject' label="Subject*" />
-                </Row>
-                <Row className='relative'>
-                  <Input s={12} name='message' ref={messageRef} label='Message*' rows='15' type='textarea' />
-                  <Button className='z-depth-0'>Send</Button>
-                </Row>
-                <Row className='phone-contact'>
-                  <div className='col s12 m6'>
-                    <img src={mobile} alt="mobile device"/>
-                    Or just pick up the phone.
-                  </div>
-                  <div className='col s12 m6'>
-                    <a href="tel:+213771356409">+ 213 771 356 409</a>
-                  </div>
-                </Row>
-                <Row>
-                  <div className='white-text'>
-                    We are available at whatsapp, telegram and twitter.
-                  </div>
-                </Row>
-                <Row>
-                  <div data-netlify-recaptcha="true"></div>
-                  <p>
-                    This form is protected by Invisible reCAPTCHA
-                    (<a href="https://policies.google.com/privacy?hl=en">Privacy</a>,&nbsp;
-                    <a href="https://policies.google.com/terms?hl=en">Terms</a>)
-                  </p>
-                </Row>
-              </form>
+<form  method="POST" name='test-form' data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
 
             </Container>
           </Col>
