@@ -71,8 +71,7 @@ export default props => {
             <Container>
               
 
-              <form className='contact-form relative' name="contact" method="POST" data-netlify="true" >
-
+              <form className='contact-form relative' action='/success-form' name="contact" method="POST" data-netlify="true" >
 
                 <Row>
                   <h2><span>Contact</span> DayenIO.</h2>
@@ -90,10 +89,15 @@ export default props => {
                 <Row className='phone-contact'>
                   <div className='col s12 m6'>
                     <img src={mobile} alt="mobile device"/>
-                    Or just pick up the phone and call us. We are available at whatsapp, telegram and twitter.
+                    Or just pick up the phone.
                   </div>
                   <div className='col s12 m6'>
                     <a href="tel:+213771356409">+ 213 771 356 409</a>
+                  </div>
+                </Row>
+                <Row>
+                  <div className='white-text'>
+                    We are available at whatsapp, telegram and twitter.
                   </div>
                 </Row>
                 <Row>

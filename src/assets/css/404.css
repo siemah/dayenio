@@ -26,3 +26,7 @@
   display: block;
   font-weight: 600;
 }
+
+.success-form img {
+  max-height: 200px;
+}

@@ -68,7 +68,7 @@ export default class Jumbotron extends React.Component {
             </Col>
           </Row>
           <Button className="scroll-indicator z-depth-4">
-            <Link to='/services'>Expolore more </Link>           
+            <Link to='/what-we-do'>Expolore more </Link>           
           </Button>
         </>
       </div>
