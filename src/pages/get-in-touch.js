@@ -71,7 +71,7 @@ export default props => {
             <Container>
               
 
-              <form className='contact-form relative' onSubmit={_onSubmit}>
+              <form className='contact-form relative' data-netlify="true" onSubmit={_onSubmit}>
 
 
                 <Row>
@@ -97,6 +97,7 @@ export default props => {
                   </div>
                 </Row>
                 <Row>
+                  <div data-netlify-recaptcha="true"></div>
                   <p>
                     This form is protected by Invisible reCAPTCHA
                     (<a href="https://policies.google.com/privacy?hl=en">Privacy</a>,&nbsp;
