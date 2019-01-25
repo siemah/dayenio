@@ -72,7 +72,7 @@ export default props => {
               
 
               <form className='contact-form relative' netlify-honeypot="bot-field" action='./success-form/' name="contact" method="POST" data-netlify="true" >
-
+                <input type="hidden" name="form-name" value="contact" />
                 <Row>
                   <h2><span>Contact</span> DayenIO.</h2>
                 </Row>
