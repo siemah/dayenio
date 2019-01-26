@@ -5,7 +5,8 @@
  */
 
 // You can delete this file if you're not using it
-exports.onServiceWorkerUpdateFound = () => {
+exports.onServiceWorkerUpdateFound = () => { 
+  // uncomment this section when website is deployed	
   /*const answer = window.confirm(
     `This application has been updated. ` +
       `Reload to display the latest version?`
