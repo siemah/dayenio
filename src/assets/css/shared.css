@@ -82,14 +82,14 @@
   content: '';
   margin-left: 0;
   left: 0px;
-  top: -25px;
+  top: -35px;
   width: 40px;
   height: 3px;
   background-color: #4a00d8;
   animation: rightbouncing .7s;
 }
 h1.before-after-content::after {
-  top: -15px;
+  top: -35px;
 }
 
 .anime {
@@ -139,6 +139,20 @@ h3 {
 }
 
 
+/***********************
+      SLIDER CSS 
+***********************/
+.media-container .carousel {
+  height: auto;
+} 
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+  background-color: transparent;
+}
+.media-container .carousel .thumb:hover,
+.media-container .carousel .thumb.selected {
+  border-color: #4a00d8;
+  cursor: pointer;
+}
 
 /*********************************
   JS CLASSES USED FOR ANIMATION

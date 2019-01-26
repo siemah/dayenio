@@ -43,12 +43,12 @@ const AboutPage = props => (
         <Row className='mb-0'>
           <Col s={12} l={6} className="left-section white-text">
             <div className='content-item'>
-              <h3 className='question'>why you will choosd sdlfk l sqld kf</h3>
+              <h3 className='question'>What they said about our works?</h3>
               <p className="answers">
-                  rying to make you satisfied.
-                  &nbsp;We hope to work remotly but if you hire us it depend to you
-                  &nbsp;We hope to work remotly but if you hire us it depend to you
-                  &nbsp;We hope to work remotly but if you hire us it depend to you
+                "They delivered high quality and excellent end-to-end 
+                digital solutions, anchored in elegance yet functional.
+                The way they approach each project: no matter how crazy and urgent are the 
+                ideas and the requests we come up with, DayenIO finds solutions which always deliver."
               </p>
             </div>
           </Col>
@@ -76,8 +76,8 @@ const AboutPage = props => (
               </Col>
               <Col s={6} className='relative center'>
                 <div className=''>
-                  <span>45</span>
-                  <h4>deesigners</h4>
+                  <span>+6</span>
+                  <h4>years of experience</h4>
                 </div>
               </Col>
             </Row>

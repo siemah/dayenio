@@ -25,12 +25,11 @@ export const SocialContactItem = ({className, href, label, alt, source}) => (
 );
 
 
-export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, techs = [], carouselImages = null, ...props}) =>{
+export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, linkLabel = null, techs = [], carouselImages = null, ...props}) =>{
   let getImage = carouselImages ?
-                <Carousel showIndicators={false}>
+                <Carousel autoPlay={true} showIndicators={false} interval={3000} infiniteLoop={true} dynamicHeight={false}>
                   {
                     carouselImages.map(img => {
-                      console.log(img.src)
                       return (
                         <div key={img.src}>
                           <img src={img.src} alt={img.alt} />
@@ -41,7 +40,7 @@ export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, br
                 </Carousel>:
                 <img src={caseImg} alt={caseImgAlt} />
 return (
-  <Row className='mb-0'>
+  <Row className='mb-0 media-container'>
    
     {
       right? 
@@ -60,7 +59,7 @@ return (
                 {
                   link &&
                   <Button>
-                    <a href={`//${link}`} target='_blanck' >{link}</a>
+                    <a href={`//${link}`} target='_blanck' >{linkLabel || link}</a>
                   </Button>
                 }
                 <div style={{ marginBottom: '10px' }} />
@@ -75,14 +74,14 @@ return (
             </div>
 
           </Col>
-          <Col m={12} l={6} style={{ height: '500px' }}>
+          <Col m={12} l={6}>
             { getImage }
           </Col>
           </>
         )   : 
         (
           <>
-            <Col m={12} l={6} style={{ height: '500px' }}>
+            <Col m={12} l={6}>
 
               {getImage}
 
@@ -101,7 +100,7 @@ return (
                   {
                     link &&
                     <Button>
-                      <a href={`//${link}`} target='_blanck' >{link}</a>
+                      <a href={`//${link}`} target='_blanck' >{linkLabel || link}</a>
                     </Button>
                   }
                   <div style={{ marginBottom: '10px' }} />

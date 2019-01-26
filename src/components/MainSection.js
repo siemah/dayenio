@@ -59,7 +59,7 @@ const MainSection = props => {
             <h2 className="before-after-content" data-content='BRANDS'>Our happy clients.</h2>
 
             <p>
-              Hey, we’re old romantics at heart. For 12+ years, we’ve
+              Hey, we’re old romantics at heart. For +6 years, we’ve
               cultivated long-term relationships with leading brands
               and companies.
             </p>

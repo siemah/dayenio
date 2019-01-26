@@ -205,6 +205,12 @@ body {
       MEDIA QUERY
 ***********************/
 
+@media only screen and (min-width: 900px) {
+  .jumbotron .jumbotron-left {
+    padding-left: 5%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .jumbotron,
   .jumbotron .jumbotron-left {
@@ -231,6 +237,7 @@ body {
     bottom: 0;
   }
 }
+
 @media only screen and (max-height: 380px) {
   .jumbotron .scroll-indicator {
     display: none;

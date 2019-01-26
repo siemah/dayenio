@@ -76,6 +76,19 @@
   .team-numbers .right-section .col {
     height: 300px;
   }
+  .team-numbers .left-section .content-item .question {
+    font-size: 30px !important;
+  }
+  .team-numbers .left-section .content-item .answers {
+    font-size: 24px !important;
+    letter-spacing: .1rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .team-numbers .left-section {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -84,5 +97,8 @@
   }
   .quote-container p{
     font-size: 17px;
+  }
+  .team-numbers .left-section {
+    padding: 10px !important;
   }
 }
