@@ -36,7 +36,7 @@ const OurWorksPage = props => (
         </h2>
 
         {
-          ourWorksData.map( work => <CaseItem {...work} key={work.brand} />)
+          ourWorksData.map( work => <CaseItem {...work} />)
         }
         
       </Container>

@@ -7,6 +7,11 @@ import strategy from '../assets/images/strategy.svg';
 import development from '../assets/images/development.svg';
 import design from '../assets/images/design.svg';
 import marketing from '../assets/images/marketing.svg';
+// brands 
+import wellness from '../assets/images/logos/brands/wellness.png'
+import shahrani from '../assets/images/logos/brands/shahrani.png'
+import inptic from '../assets/images/logos/brands/inptic.jpg'
+
 import '../assets/css/main-section.css'
 import Button from 'react-materialize/lib/Button';
 
@@ -66,20 +71,16 @@ const MainSection = props => {
 
             <div className="brands-logo row">
               <Col s={6} m={3} className='center'>
-                <img src={marketing} width='80' alt="brand name" /><br />
+                <img src={wellness} width='80' alt="brand name" /><br />
                 <strong>wellness qatar</strong>
               </Col>
               <Col s={6} m={3} className='center'>
-                <img src={marketing} width='80' alt="brand name" /><br />
-                <strong>wellness events</strong>
+                <img src={shahrani} width='80' height='80' alt="brand name" /><br />
+                <strong>Shahrani</strong>
               </Col>
               <Col s={6} m={3} className='center'>
-                <img src={marketing} width='80' alt="brand name" /><br />
-                <strong>horizon</strong>
-              </Col>
-              <Col s={6} m={3} className='center'>
-                <img src={marketing} width='80' alt="brand name" /><br />
-                <strong>wellness qatar</strong>
+                <img src={inptic} width='80' alt="brand name" /><br />
+                <strong>I.N.P.T.IC</strong>
               </Col>
             </div>
 

@@ -8,6 +8,13 @@
 * {
   font-family: 'Varela Round', sans-serif !important;
 }
+body {
+  animation: scaling .5s;
+}
+@keyframes scaling {
+  0% {transform: scale(0) }
+  100% {transform: scale(1) }
+}
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -142,6 +149,12 @@ h3 {
 /***********************
       SLIDER CSS 
 ***********************/
+.media-container {
+  margin: 50px 0;
+}
+.media-container:last-of-type {
+  margin-bottom: 0 !important;
+}
 .media-container .carousel {
   height: auto;
 } 

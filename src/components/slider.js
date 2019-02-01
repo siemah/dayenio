@@ -5,6 +5,8 @@ import debounce from 'lodash.debounce';
 import '../assets/css/slider.css'
 import { Container } from 'react-materialize';
 
+import sliderItems from '../assets/files/about-us';
+
 const SliderItem = ({ description, post, name, location, active, ...rest }) => (
   <div className={`slider-item js-slider-item ${active? 'active' : ''}`} {...rest}>
 
@@ -55,48 +57,20 @@ export default class Slider extends React.Component {
     return (
       <div className='slider relative grey lighten-4'>
         <Container className='before-after-content' data-content='WHAT SAY ABOUT US'>
-
-          <SliderItem
-            name='Sven bender'
-            location='Setif Algeria'
-            description={`1111111111111111 consectetur adipisicing elit. Laboriosam quisquam
-            sequi ducimus error est debitis necessitatibus
-            iusto ea, facere ut tempora nam.`}
-            post='CEO DAYENIO'
-            active
-            data-index='1'
-          />
-
-          <SliderItem
-            name='Sven bender'
-            location='Setif Algeria'
-            description={`22222222222222222222222 consectetur adipisicing elit. Laboriosam quisquam
-            sequi ducimus error est debitis necessitatibus
-            iusto ea, facere ut tempora nam.`}
-            post='CEO DAYENIO'
-            data-index='2'
-          />
-
-          <SliderItem
-            name='Sven bender'
-            location='Setif Algeria'
-            description={`333333333333333333333 consectetur adipisicing elit. Laboriosam quisquam
-            sequi ducimus error est debitis necessitatibus
-            iusto ea, facere ut tempora nam.`}
-            post='CEO DAYENIO'
-            data-index='2'
-          />
-
-          <SliderItem
-            name='Sven bender'
-            location='Setif Algeria'
-            description={`444444444444444444442222222222222 consectetur adipisicing elit. Laboriosam quisquam
-            sequi ducimus error est debitis necessitatibus
-            iusto ea, facere ut tempora nam.`}
-            post='CEO DAYENIO'
-            data-index='2'
-          />
-
+          {
+            sliderItems.map(({name, location, description, post, key, index}) => (
+              <SliderItem
+                key={key}
+                name={name}
+                location={location}
+                description={description}
+                post={post}
+                data-index={index}
+                active
+              />
+            ))
+          }
+          
         </Container>
       </div>
     )

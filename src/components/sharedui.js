@@ -40,7 +40,7 @@ export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, br
                 </Carousel>:
                 <img src={caseImg} alt={caseImgAlt} />
 return (
-  <Row className='mb-0 media-container'>
+  <Row className='media-container'>
    
     {
       right? 

@@ -28,3 +28,12 @@
     color: #787878
 }
 
+.carousel img {
+    height: 100% !important;
+    width: 50% !important;
+}
+
+.carousel.carousel-slider .control-arrow {
+    background-color: rgba(45, 45, 45, .5);
+    border-radius: 0;
+}

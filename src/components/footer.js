@@ -157,9 +157,9 @@ export default class Footer extends React.Component {
 
           <ul className="social-media left">
             <SocialContactItem href='mailto:hamsikpastore@gmail.com' label='dayenio email' className='s-email red' source={envelope} />
-            <SocialContactItem href='//whatsapp.com' label='dayenio whatsapp contact' source={whatsapp} />
-            <SocialContactItem href='//twitter.com' label='dayenio twitter contact' source={twitter} />
-            <SocialContactItem href='//telegram.com' label='dayenio telegram contact' source={telegram} />
+            <SocialContactItem href='https://wa.me/213696581187' label='dayenio whatsapp contact' source={whatsapp} />
+            <SocialContactItem href='https://twitter.com/siemahlsidem' label='dayenio twitter contact' source={twitter} />
+            <SocialContactItem href='https://t.me/khezetawina' label='dayenio telegram contact' source={telegram} />
           </ul>
 
           <div className='website-links left'>
@@ -183,11 +183,11 @@ export default class Footer extends React.Component {
                   <ul className='old-contacts mb-0 ml-0'>
                     <li>
                       <img src={smartphone} alt='smartphone' />
-                      <a href='tel:+231771356409' title='call us'>+231 771 356 409</a>
+                      <a href='tel:+213696581187' title='call us'>+231 771 356 409</a>
                     </li>
                     <li>
                       <img src={problem} alt='problem' />
-                      <a href='tel:+231771356409' title='call us'>Get in touch</a>
+                      <a href='/get-in-touch/' title='get in touch'>Get in touch</a>
                     </li>
                   </ul>
                 </Col>
@@ -201,10 +201,10 @@ export default class Footer extends React.Component {
         <br clear='both' />
         <ul className="footer-breadcrumb mb-0 ml-0 s-disapear">
           <LinkItem to='/' label='Home' containerClass='breadcrumb-item' />
-          <LinkItem to='/page-2' label='What we do' containerClass='breadcrumb-item' />
-          <LinkItem to='/page-2' label='Who we are' containerClass='breadcrumb-item' />
-          <LinkItem to='/page-2' label='Our works' containerClass='breadcrumb-item' />
-          <LinkItem to='/page-2' label='Get in touch' containerClass='breadcrumb-item mb-0' />
+          <LinkItem to='/what-we-do' label='What we do' containerClass='breadcrumb-item' />
+          <LinkItem to='/about-us' label='Who we are' containerClass='breadcrumb-item' />
+          <LinkItem to='/our-works' label='Our works' containerClass='breadcrumb-item' />
+          <LinkItem to='/get-in-touch' label='Get in touch' containerClass='breadcrumb-item mb-0' />
         </ul>
 
       </div>
