@@ -4,20 +4,20 @@ import itsday from '../images/our-works/csi-inptic/its-day.jpg';
 import jit from '../images/our-works/csi-inptic/jit-inptic.png';
 
 //Wellness Inc.
-import wellnessCaseImg from '../images/our-works/wellness/wellness.png'
-import android1 from '../images/our-works/wellness/android1.png'
-import android3 from '../images/our-works/wellness/android3.png'
-import android4 from '../images/our-works/wellness/android4.png'
-import android5 from '../images/our-works/wellness/android5.png'
-import android6 from '../images/our-works/wellness/android6.png'
+import wellnessCaseImg from '../images/our-works/wellness/wellness.png';
+import android1 from '../images/our-works/wellness/android1.png';
+import android3 from '../images/our-works/wellness/android3.png';
+import android4 from '../images/our-works/wellness/android4.png';
+import android5 from '../images/our-works/wellness/android5.png';
+import android6 from '../images/our-works/wellness/android6.png';
 
 //shahrani
-import shahraniCase from '../images/our-works/elshahrani/shahrani.png'
+import shahraniCase from '../images/our-works/elshahrani/shahrani.png';
 
 //brands logo
 import inptic from '../images/logos/brands/inptic.jpg';
-import wellnessLogo from '../images/logos/brands/wellness.png'
-import shahrani from '../images/logos/brands/shahrani.png'
+import wellnessLogo from '../images/logos/brands/wellness.png';
+import shahrani from '../images/logos/brands/shahrani.png';
 
 export default [
   {
@@ -46,8 +46,7 @@ export default [
     caseImgAlt: 'wellness logo',
     caseImg: wellnessCaseImg,
     techs: ['HTML5', 'Nodejs', 'Mongodb', 'Wordpress', 'Mysql'],
-    caseDescription: `The first website specialised in healthy lifestyle where the elements of wellness meet in qatar.
-    In this case we make android application veriosn of wellnessqatar0com website.`,
+    caseDescription: `The first website specialised in healthy lifestyle where the elements of wellness meet in qatar. In this case we make android application veriosn of wellnessqatar0com website.`,
     link: `www.wellnessqatar.com`,
     isCarousel: false,
   },
@@ -63,7 +62,7 @@ export default [
     logo: inptic,
     caseImgAlt: 'Inptic logo',
     techs: ['Photoshop', 'Ilustrator', 'InDesign'],
-    caseDescription: `is a training institute. train the elites in the field of ICT. In several times we have cuncus and manage events of the scientific club of this institute`,
+    caseDescription: `is a training institute. train the elites in the field of ICT. In several times we have cuncus and manage events of the scientific club of this institute.`,
     isCarousel: true,
   },
   {
