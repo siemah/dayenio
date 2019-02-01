@@ -4,7 +4,7 @@ import itsday from '../images/our-works/csi-inptic/its-day.jpg';
 import jit from '../images/our-works/csi-inptic/jit-inptic.png';
 
 //Wellness Inc.
-import wellnessCaseImg from '../images/our-works/wellness/wellness.png';
+import wellnessCaseImg from '../images/our-works/wellness/wellness.PNG';
 import android1 from '../images/our-works/wellness/android1.png';
 import android3 from '../images/our-works/wellness/android3.png';
 import android4 from '../images/our-works/wellness/android4.png';
