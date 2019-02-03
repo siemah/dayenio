@@ -32,14 +32,14 @@ module.exports = {
         icon: `src/images/icon-384x384.png`, // This path is relative to the root of the site.
       },
     },
-    {
+    /*{
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
           families: ['Varela Round']
         }
       }
-    },
+    },*/
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
