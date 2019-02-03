@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://dayenio.ml`,
     title: `DayenIO`,
     description: `dayenio is a team of developers, designers and marketers. 
     We help brands with conversion-focused marketing campaigns through strategy, design and development.
@@ -54,6 +55,16 @@ module.exports = {
         siteSpeedSampleRate: 10,
         cookieDomain: "dayenio.ml",
       },
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://dayenio.ml',
+        sitemap: 'https://dayenio.ml/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+        output: '/robots.txt'
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
