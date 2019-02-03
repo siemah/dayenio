@@ -18,14 +18,6 @@ const messageRef = React.createRef();
 
 export default props => {
   
-  const _onSubmit = e => {
-    e.preventDefault();
-    if( typeof window !== `undefined`) {
-      let _activityIndicator = document.querySelector('.js-show');
-      _activityIndicator.className = _activityIndicator.className.replace(' hide', '');
-      
-    } 
-  }
 
   return (
     <Layout footerPaddingTop >

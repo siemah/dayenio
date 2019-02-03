@@ -16,7 +16,7 @@ export default [
     Over the years, they have delivered outstanding solutions for many of our brands, including 
     Wellnessqatar  and Wellness event.`,
     post: 'CEO Wellness Inc.',
-  }, ,
+  },
   {
     key: 'mario.it',
     name: 'Mr. Mario',

@@ -72,11 +72,11 @@ const MainSection = props => {
             <div className="brands-logo row">
               <Col s={6} m={3} className='center'>
                 <img src={wellness} width='80' alt="brand name" /><br />
-                <strong>wellness qatar</strong>
+                <strong>Wellness qatar</strong>
               </Col>
               <Col s={6} m={3} className='center'>
                 <img src={shahrani} width='80' height='80' alt="brand name" /><br />
-                <strong>Shahrani</strong>
+                <strong>Al Shahrani</strong>
               </Col>
               <Col s={6} m={3} className='center'>
                 <img src={inptic} width='80' alt="brand name" /><br />

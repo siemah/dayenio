@@ -66,7 +66,7 @@ export default props => {
               <ImageIcon className='js-fading opacity-0' source={php} alt='php logo' />
               <ImageIcon className='js-fading opacity-0' source={android} alt='android logo' />
               <ImageIcon className='js-fading opacity-0' source={ios} alt='ios logo' />
-              <ImageIcon className='js-fading opacity-0' source={photoshop} alt='photoshop logo' className='photoshop' />
+              <ImageIcon className='js-fading opacity-0 photoshop' source={photoshop} alt='photoshop logo' />
               <ImageIcon className='js-fading opacity-0' source={laravel} alt='laravel logo' />
               <ImageIcon className='js-fading opacity-0' source={python} alt='python logo' />
               <ImageIcon className='js-fading opacity-0' source={html} alt='html logo' />
