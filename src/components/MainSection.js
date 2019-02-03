@@ -75,7 +75,7 @@ const MainSection = props => {
                 <strong>Wellness qatar</strong>
               </Col>
               <Col s={6} m={3} className='center'>
-                <img src={shahrani} width='80' height='80' alt="brand name" /><br />
+                <img src={shahrani} width='115' height='80' alt="brand name" /><br />
                 <strong>Al Shahrani</strong>
               </Col>
               <Col s={6} m={3} className='center'>
