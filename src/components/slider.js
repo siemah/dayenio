@@ -43,7 +43,7 @@ export default class Slider extends React.Component {
           nextItem.className += " active";
         }
         this.initSlider();
-      }, 15000);
+      }, 7000);
     }
   }
 
@@ -58,7 +58,7 @@ export default class Slider extends React.Component {
       <div className='slider relative grey lighten-4'>
         <Container className='before-after-content' data-content='WHAT SAY ABOUT US'>
           {
-            sliderItems.map(({name, location, description, post, key, index}) => (
+            sliderItems.map(({name, location, description, post, key}, index) => (
               <SliderItem
                 key={key}
                 name={name}
@@ -66,7 +66,7 @@ export default class Slider extends React.Component {
                 description={description}
                 post={post}
                 data-index={index}
-                active
+                active={index === 0? true : false }
               />
             ))
           }

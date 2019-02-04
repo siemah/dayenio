@@ -17,7 +17,6 @@ const subjectRef = React.createRef();
 const messageRef = React.createRef();
 
 export default props => {
-  
 
   return (
     <Layout footerPaddingTop >
@@ -84,12 +83,14 @@ export default props => {
                     Or just pick up the phone.
                   </div>
                   <div className='col s12 m6'>
-                    <a href="tel:+213771356409">+ 213 771 356 409</a>
+                    <a href="tel:+231696581187">+ 213 696 581 187</a>
                   </div>
                 </Row>
                 <Row>
                   <div className='white-text'>
-                    We are available at whatsapp, telegram and twitter.
+                    We are available at <a href='https://wa.me/213696581187' data-content='what' className='white-text underline'>whatsapp</a>,&nbsp; 
+                    <a href="https://t.me/khezetawina" className='white-text underline' data-content='tele'>telegram</a> and&nbsp;
+                    <a href="https://twitter.com/siemahlsidem" className='white-text underline' data-content='twit'>twitter</a>.
                   </div>
                 </Row>
                 <Row>

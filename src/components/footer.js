@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { Link } from 'gatsby';
 import debounce from 'lodash.debounce';
 import { Container, Row, Col } from 'react-materialize';
 
@@ -143,8 +144,6 @@ export default class Footer extends React.Component {
   componentDidMount = () => {
     if (typeof window !== `undefined`) {
       this._onLoad();
-      //var elems = document.querySelectorAll('.parallax');
-      //Parallax.init(elems);
     }
   }
 
@@ -183,11 +182,11 @@ export default class Footer extends React.Component {
                   <ul className='old-contacts mb-0 ml-0'>
                     <li>
                       <img src={smartphone} alt='smartphone' />
-                      <a href='tel:+213696581187' title='call us'>+231 771 356 409</a>
+                      <a href='tel:+213696581187' title='call us'>+231 696 581 187</a>
                     </li>
                     <li>
                       <img src={problem} alt='problem' />
-                      <a href='/get-in-touch/' title='get in touch'>Get in touch</a>
+                      <Link to='/get-in-touch/' title='get in touch'>Get in touch</Link>
                     </li>
                   </ul>
                 </Col>
@@ -200,11 +199,11 @@ export default class Footer extends React.Component {
         </div>
         <br clear='both' />
         <ul className="footer-breadcrumb mb-0 ml-0 s-disapear">
-          <LinkItem to='/' label='Home' containerClass='breadcrumb-item' />
-          <LinkItem to='/what-we-do' label='What we do' containerClass='breadcrumb-item' />
-          <LinkItem to='/about-us' label='Who we are' containerClass='breadcrumb-item' />
-          <LinkItem to='/our-works' label='Our works' containerClass='breadcrumb-item' />
-          <LinkItem to='/get-in-touch' label='Get in touch' containerClass='breadcrumb-item mb-0' />
+          <LinkItem to='' label='Home' containerClass='breadcrumb-item' />
+          <LinkItem to='what-we-do' label='What we do' containerClass='breadcrumb-item' />
+          <LinkItem to='about-us' label='Who we are' containerClass='breadcrumb-item' />
+          <LinkItem to='our-works' label='Our works' containerClass='breadcrumb-item' />
+          <LinkItem to='get-in-touch' label='Get in touch' containerClass='breadcrumb-item mb-0' />
         </ul>
 
       </div>

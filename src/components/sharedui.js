@@ -27,7 +27,7 @@ export const SocialContactItem = ({className, href, label, alt, source}) => (
 
 export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, linkLabel = null, techs = [], carouselImages = null, ...props}) =>{
   let getImage = carouselImages ?
-                <Carousel autoPlay={true} showIndicators={false} interval={3000} infiniteLoop={true} dynamicHeight={false}>
+    <Carousel autoPlay={true} showIndicators={false} interval={3000}  infiniteLoop={true} dynamicHeight={false}>
                   {
                     carouselImages.map(img => {
                       return (

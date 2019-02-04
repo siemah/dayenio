@@ -31,14 +31,6 @@
 * {
   font-family: 'Varela Round', sans-serif !important;
 }
-body {
-  animation: scaling .5s;
-}
-@keyframes scaling {
-  0% {transform: scale(0) }
-  50% {transform: scale(1.5) }
-  100% {transform: scale(1) }
-}
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -169,6 +161,23 @@ h3 {
   font-size: 24px !important;
 }
 
+.underline {
+  position: relative;
+  z-index: 100 !important;
+}
+.underline::before {
+  content: attr(data-content);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #fc3f3f;
+  background: linear-gradient(138.82deg,#4a00d8,#fc3f3f 99.98%);
+  z-index: -1;
+  color: #fc3f3f;
+  border-radius: 3px;
+}
 
 /***********************
       SLIDER CSS 

@@ -55,14 +55,14 @@ const AboutPage = props => (
             <Row className='mb-0'>
               <Col s={6} className='relative center'>
                 <div>
-                  <span>5</span>
+                  <span>+5</span>
                   <h4>designers &amp; developers</h4>
                 </div>
               </Col>
               <Col s={6} className='relative center even'>
                 <div className='white-text'>
                   <span>+10</span>
-                  <h4>clients &amp; brands</h4>
+                  <h4>brands</h4>
                 </div>
               </Col>
             </Row>
@@ -70,13 +70,13 @@ const AboutPage = props => (
               <Col s={6} className='relative center even'>
                 <div className='white-text'>
                   <span>+20</span>
-                  <h4>Technologies we use</h4>
+                  <h4>Technologies</h4>
                 </div>
               </Col>
               <Col s={6} className='relative center'>
                 <div className=''>
                   <span>+6</span>
-                  <h4>years of experience</h4>
+                  <h4>years</h4>
                 </div>
               </Col>
             </Row>
