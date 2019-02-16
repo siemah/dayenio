@@ -22,7 +22,7 @@ import shahrani from '../images/logos/brands/shahrani.png';
 export default [
   {
     key: 'item-1',
-    brand: 'Wellness Inc.',
+    brand: 'Wellness Inc. Android App',
     carouselImages: [
       { src: android1, alt: "Main screen" },
       { src: android3, alt: "Nutrition screen" },
@@ -33,8 +33,10 @@ export default [
     right: true,
     logo: wellnessLogo,
     caseImgAlt: 'Inptic logo',
-    techs: ['Photoshop', 'Ilustrator', 'InDesign'],
+    techs: ['React Native', 'Nodejs', 'MongoDb'],
     caseDescription: `is a training institute. train the elites in the field of ICT. In several times we have cuncus and manage events of the scientific club of this institute`,
+    link: `play.google.com/store/apps/details?id=com.wellness.android`,
+    linkLabel: 'Google Play',
     isCarousel: true,
   },
   {

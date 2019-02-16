@@ -25,22 +25,22 @@ export const SocialContactItem = ({className, href, label, alt, source}) => (
 );
 
 
-export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, linkLabel = null, techs = [], carouselImages = null, ...props}) =>{
+export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, brand, caseDescription, link = null, linkLabel = '', techs = [], carouselImages = null, ...props}) =>{
   let getImage = carouselImages ?
     <Carousel autoPlay={true} showIndicators={false} interval={3000}  infiniteLoop={true} dynamicHeight={false}>
-                  {
-                    carouselImages.map(img => {
-                      return (
-                        <div key={img.src}>
-                          <img src={img.src} alt={img.alt} />
-                        </div>
-                      )
-                    })
-                  }   
-                </Carousel>:
-                <img src={caseImg} alt={caseImgAlt} />
+      {
+        carouselImages.map(img => {
+          return (
+            <div key={img.src}>
+              <img src={img.src} alt={img.alt} />
+            </div>
+          )
+        })
+      }   
+    </Carousel>:
+    <img src={caseImg} alt={caseImgAlt} />
 return (
-  <Row className='media-container'>
+    <Row className='media-container custom-container'>
    
     {
       right? 

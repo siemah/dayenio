@@ -8,6 +8,7 @@ import ourWorksData from '../assets/files/our-works-data';
 
 import { Container } from 'react-materialize';
 import { CaseItem } from '../components/sharedui';
+import GetStarted from '../components/get-started'
 
 import '../assets/css/our-works.css'
 import '../assets/css/shared.css'
@@ -26,21 +27,22 @@ const OurWorksPage = props => (
       `react-native freelancer`, 'JAM stack', 'JAM stack freelancer', 'JAM stack developer'
       ]} />
     
-    <div className="our-works-page grey lighten-5">
+    <div className="our-works-page grey lighten-5 pt-0">
 
-      <Container className='custom-container'>
 
-        <h2 className='technos-title relative center'>
+
+      <h2 className='technos-title relative center anime-slideUp'>
+        <Container>
           Take a tour and see what we’ve created in the past so we may &nbsp;
           <strong>create something together</strong> in the future!
-        </h2>
+        </Container>
+      </h2>
 
-        {
-          ourWorksData.map( work => <CaseItem {...work} />)
-        }
+      {
+        ourWorksData.map( work => <CaseItem {...work} />)
+      }
         
-      </Container>
-
+      <GetStarted />
 
     </div>
 

@@ -147,6 +147,9 @@ export default class Footer extends React.Component {
     }
   }
 
+  componentWillUnmount = () => {
+    window.removeEventListener("scroll", e => this.emitDebounce(e));
+  }
   
   render () {
     return (

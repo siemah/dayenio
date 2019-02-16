@@ -4,11 +4,13 @@
 
 .technos-title {
     font-weight: 400;
-    color: #454545;
+    color: #ffffff;
     font-size: 40px;
+    padding: 70px 0;
+    background-color: #4a00d8;
 }
 .technos-title strong {
-    color: #4a00d8;
+    text-decoration: underline;
 }
 
 .our-works-page button {
@@ -39,6 +41,9 @@
 }
 
 @media only screen and (max-width: 460px) {
+  .carousel.carousel-slider .control-arrow {
+    display: none;
+  }
   .carousel img {
     float: left;
   }
