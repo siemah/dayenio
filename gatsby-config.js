@@ -32,28 +32,18 @@ module.exports = {
         icon: `src/images/icon-384x384.png`, // This path is relative to the root of the site.
       },
     },
-    /*{
+    {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
           families: ['Varela Round']
         }
       }
-    },*/
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-133717096-1",
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: false,
-        // Setting this parameter is also optional
-        respectDNT: false,
-        // Any additional create only fields (optional)
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "dayenio.ml",
+        trackingId: "UA-133717096-1"
       },
     },
     'gatsby-plugin-sitemap',
