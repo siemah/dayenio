@@ -31,8 +31,8 @@ const OurWorksPage = props => (
 
 
 
-      <h2 className='technos-title relative center anime-slideUp'>
-        <Container>
+      <h2 className='technos-title relative center mt-0'>
+        <Container className='anime-slideUp'>
           Take a tour and see what we’ve created in the past so we may &nbsp;
           <strong>create something together</strong> in the future!
         </Container>
