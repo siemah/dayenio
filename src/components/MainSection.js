@@ -7,7 +7,7 @@ import strategy from '../assets/images/strategy.svg';
 import development from '../assets/images/development.svg';
 import design from '../assets/images/design.svg';
 import marketing from '../assets/images/marketing.svg';
-// brands 
+// brands
 import wellness from '../assets/images/logos/brands/wellness.png'
 import shahrani from '../assets/images/logos/brands/shahrani.png'
 import inptic from '../assets/images/logos/brands/inptic.jpg'
@@ -24,10 +24,10 @@ const MainSection = props => {
           <Col s={12} l={5} className='left-section js-anime anime'>
             <h2 className='before-after-content' data-content='WHAT WE DO'>Innovation and impact.</h2>
             <p>
-              Our team has two goals: optimise every user’s experience, 
+              Our team has two goals: optimise every user’s experience,
               and create real impact for our clients. <br />
-              We worked with several client from diffirent countries 
-              like Qatar, Frensh, Algeria and many others countries.
+              We worked with several client from diffirent countries
+              like Frensh, Italy, Qatar, Algeria, KSA and many others countries.
             </p>
             <div>
               <Link to='/what-we-do' >Discover more</Link>
@@ -59,12 +59,12 @@ const MainSection = props => {
         <div className='left-section col s12 m7 js-parallax' data-direction='up'>
 
           <Container>
-          
+
 
             <h2 className="before-after-content" data-content='BRANDS'>Our happy clients.</h2>
 
             <p>
-              Hey, we’re old romantics at heart. For +6 years, we’ve
+              Hey, we’re old romantics at heart. For more than 6 years, we’ve
               cultivated long-term relationships with leading brands
               and companies.
             </p>
@@ -87,7 +87,7 @@ const MainSection = props => {
           </Container>
 
         </div>
-        
+
         <div className='right-section js-parallax' data-direction='down'>
           <Button className='z-depth-0'>
             <Link to='/our-works' alt='See what we build to this brands'>Discover more</Link>
@@ -100,4 +100,4 @@ const MainSection = props => {
   )
 };
 
-export default MainSection; 
+export default MainSection;
