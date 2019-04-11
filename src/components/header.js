@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { FormattedMessage } from 'react-intl';
 
 import { LinkItem } from './sharedui';
 
@@ -44,7 +43,7 @@ const header = (props) => {
         <ul id="" className="hide-on-medium-and-down">
           <LinkItem to={`/${currentLang}`} labelId='home' className='navbar-link' />
           <LinkItem to={`/${currentLang}/what-we-do`} labelId='What We Do' className='navbar-link' />
-          <LinkItem to={`/${currentLang}/our-works`} labelId='our works' className='navbar-link' />
+          <LinkItem to={`/${currentLang}/our-works`} labelId='our-works' className='navbar-link' />
         </ul>
         <ul className="right hide-on-medium-and-down">
           { LangsLinkItem }

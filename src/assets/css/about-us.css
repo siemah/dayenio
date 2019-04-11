@@ -1,7 +1,7 @@
 .hero-quote {
-  background-color: #4a00d8; 
+  background-color: #4a00d8;
 }
-.quote-container { 
+.quote-container {
   padding: 50px 0;
   color: #ffffff !important;
 }
@@ -52,9 +52,10 @@
   font-size: 40px;
   font-weight: 600;
 }
-.team-numbers .right-section .col div h4 {
+.team-numbers .right-section .col div h4,
+.team-numbers .right-section .col div h4 span {
   font-weight: 400;
-  font-size: 20px; 
+  font-size: 20px;
   margin-top: 30px;
   position: relative;
 }

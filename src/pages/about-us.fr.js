@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/layout/fr';
 import SEO from '../components/seo';
@@ -27,13 +28,8 @@ const AboutPage = props => (
       <div className="relative hero-quote">
         <Container>
           <div className="quote-container anime-slideUp center">
-            <h1>It's not about us. It's about you.</h1>
-            <p>
-              We bring together creative thinking and production expertise to amplify brands
-              and their stories from our state-of-the-art production facilities in The world.
-              We are a team of developers, designers and digital nerds. , trying to make you satisfied.
-              &nbsp;We hope to work remotly but if you hire us it depend to you.
-            </p>
+            <h1><FormattedMessage id="about-you" /></h1>
+            <p><FormattedMessage id="about-us-description" /></p>
           </div>
         </Container>
       </div>
@@ -42,12 +38,9 @@ const AboutPage = props => (
         <Row className='mb-0'>
           <Col s={12} l={6} className="left-section white-text">
             <div className='content-item'>
-              <h3 className='question'>What they said about our works?</h3>
+              <h3 className='question'><FormattedMessage id="about-us-said-question" /></h3>
               <p className="answers">
-                "They delivered high quality and excellent end-to-end
-                digital solutions, anchored in elegance yet functional.
-                The way they approach each project: no matter how crazy and urgent are the
-                ideas and the requests we come up with, DayenIO finds solutions which always deliver."
+                "<FormattedMessage id='about-us-said-answer'/>"
               </p>
             </div>
           </Col>
@@ -62,7 +55,7 @@ const AboutPage = props => (
               <Col s={6} className='relative center even'>
                 <div className='white-text'>
                   <span>+10</span>
-                  <h4>brands</h4>
+                  <h4><FormattedMessage id='brands' /></h4>
                 </div>
               </Col>
             </Row>
@@ -76,7 +69,7 @@ const AboutPage = props => (
               <Col s={6} className='relative center'>
                 <div className=''>
                   <span>+6</span>
-                  <h4>years</h4>
+                  <h4><FormattedMessage id='years' /></h4>
                 </div>
               </Col>
             </Row>
