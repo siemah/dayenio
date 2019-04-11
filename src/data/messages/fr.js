@@ -10,4 +10,7 @@ module.exports = {
   'about-us-said-answer': `Ils ont fourni des solutions numériques complètes de haute qualité et d'excellente qualité, ancrées dans une élégance tout en restant fonctionnelles. La manière dont ils abordent chaque projet: aussi fous et urgents soient les idées et les demandes que nous formulons, DayenIO trouve des solutions toujours efficaces.`,
   'brands': 'marques',
   'years': 'années',
+  'get-started-description': 'Laissons grandir et rejoignons ensemble le flux de la révolution.',
+  'get-started-button': 'Rejoignez et commencer',
+
 };

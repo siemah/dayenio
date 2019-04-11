@@ -11,4 +11,6 @@ module.exports = {
   'about-us-said-answer': `They delivered high quality and excellent end-to-end digital solutions, anchored in elegance yet functional. The way they approach each project: no matter how crazy and urgent are the ideas and the requests we come up with, DayenIO finds solutions which always deliver.`,
   'brands': 'brands',
   'years': 'years',
+  'get-started-description': 'Let grow up and join the flux of revolution together.',
+  'get-started-button': 'Join and get started'
 };
