@@ -31,7 +31,7 @@ const Layout = ({ children, location, footerPaddingTop, i18nMessages }) => {
       }
     `}
       render={data => {
-        const url =location.pathname;
+        const url = typeof window !== `undefined`? location.pathname : '/';
         const { langs, defaultLangKey } = data.site.siteMetadata.languages;
         const langKey = getCurrentLangKey(langs, defaultLangKey, url);
         const homeLink = `/${langKey}`.replace(`/${defaultLangKey}/`, '/');
