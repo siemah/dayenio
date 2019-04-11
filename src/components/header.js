@@ -22,7 +22,7 @@ const header = (props) => {
     }
   }
   const LangsLinkItem = langs.map(lang =>
-    currentLang.toLowerCase() !== lang.langKey.toLowerCase() && 
+    currentLang.toLowerCase() !== lang.langKey.toLowerCase() &&
     <LinkItem
       to={lang.link}
       key={lang.langKey}
@@ -38,21 +38,20 @@ const header = (props) => {
     <nav className='top-navbar z-depth-0' id='main-menu'>
       <div className="nav-wrapper">
         <Link to={`/${currentLang}`} className="brand-logo">DAYENIO</Link>
-          <a href="#main-menu" aria-labelledby='main-menu' onClick={_onClickMobileBtn}  id='btn-mobile' className="btn-mobile-menu js-mobile-menu-trigger" role="button">
+        <a href="#main-menu" aria-labelledby='main-menu' onClick={_onClickMobileBtn} id='btn-mobile' className="btn-mobile-menu js-mobile-menu-trigger" role="button">
           <span></span>
         </a>
         <ul id="" className="hide-on-medium-and-down">
-          <LinkItem to={`/${currentLang}`} label='Home' className='navbar-link' />
-          <LinkItem to={`/${currentLang}/what-we-do`} label='What We Do' className='navbar-link' />
-          <LinkItem to={`/${currentLang}/our-works`} label='Our works' className='navbar-link' />
+          <LinkItem to={`/${currentLang}`} labelId='home' className='navbar-link' />
+          <LinkItem to={`/${currentLang}/what-we-do`} labelId='What We Do' className='navbar-link' />
+          <LinkItem to={`/${currentLang}/our-works`} labelId='our works' className='navbar-link' />
         </ul>
         <ul className="right hide-on-medium-and-down">
           { LangsLinkItem }
-          <LinkItem to={`/${currentLang}/about-us`} label='About Us' className='navbar-link' />
-          <LinkItem to={`/${currentLang}/get-in-touch`} label='Get In Touch' className='navbar-link estimate-btn green-bg white-text' />
+          <LinkItem to={`/${currentLang}/about-us`} labelId='about us' className='navbar-link' />
+          <LinkItem to={`/${currentLang}/get-in-touch`} labelId='Get In Touch' className='navbar-link estimate-btn green-bg white-text' />
         </ul>
       </div>
-      {/*<FormattedMessage id="selectLanguage" />*/}
     </nav>
     <div className="fixed-fake"></div>
     </>

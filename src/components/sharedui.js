@@ -1,16 +1,23 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { FormattedMessage } from 'react-intl';
 import { Row, Col, Button, Chip } from 'react-materialize';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
 
-export const LinkItem = ({ containerClass, to, label, alt, className, Children, ...props}) => {
+export const LinkItem = ({ containerClass, to, labelId=null, label, alt, className, Children, ...props}) => {
   return (
     <li className={containerClass || ''}>
       {
-        <Link to={"/" + to} alt={alt || ''} className={className} {...props}>{label}</Link>
+        <Link to={"/" + to} alt={alt || ''} className={className} {...props}>
+          {
+            labelId !== null ?
+              <FormattedMessage id={labelId} />:
+              label
+          }
+        </Link>
       }
     </li>
   )
@@ -36,14 +43,14 @@ export const CaseItem = ({ right = false, caseImg, caseImgAlt, logo, altLogo, br
             </div>
           )
         })
-      }   
+      }
     </Carousel>:
     <img src={caseImg} alt={caseImgAlt} />
 return (
     <Row className='media-container custom-container'>
-   
+
     {
-      right? 
+      right?
         (
           <>
           <Col m={12} l={6}>
@@ -78,7 +85,7 @@ return (
             { getImage }
           </Col>
           </>
-        )   : 
+        )   :
         (
           <>
             <Col m={12} l={6}>
@@ -119,8 +126,8 @@ return (
           </>
         )
     }
-   
-    
+
+
   </Row>
 
 )
