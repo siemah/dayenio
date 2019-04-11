@@ -1,11 +1,15 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://dayenio.ml`,
+    languages: {
+      langs: ['en', 'fr'],
+      defaultLangKey: 'en'
+    },
     title: `DayenIO`,
-    description: `dayenio is a team of developers, designers and marketers. 
+    description: `dayenio is a team of developers, designers and marketers.
     We help brands with conversion-focused marketing campaigns through strategy, design and development.
-    We are in digital field for more than 10 years, 
-    work hard to satisfact our clients and give to user a better experience. We work with more than 10 brands, and we achieve to 
+    We are in digital field for more than 10 years,
+    work hard to satisfact our clients and give to user a better experience. We work with more than 10 brands, and we achieve to
     make those grow up faster than others. We make communication between costumers and brands smooth and `,
     author: `@siemah`,
   },
@@ -32,14 +36,6 @@ module.exports = {
         icon: `src/images/icon-384x384.png`, // This path is relative to the root of the site.
       },
     },
-    /*{
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Varela Round']
-        }
-      }
-    },*/
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -54,6 +50,16 @@ module.exports = {
         sitemap: 'https://dayenio.ml/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
         output: '/robots.txt'
+      }
+    },
+    // add ineternationalization to website
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'any',
+        langKeyDefault: 'en',
+        useLangKeyLayout: true,
+        prefixDefault: false,
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

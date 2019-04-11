@@ -1,7 +1,7 @@
 
 import React from 'react'
 
-import Layout from '../components/layout';
+import Layout from '../components/layout/fr';
 import SEO from '../components/seo';
 import { Container, Row, Col, Input, Button, Preloader } from 'react-materialize';
 
@@ -19,7 +19,9 @@ const messageRef = React.createRef();
 export default props => {
 
   return (
-    <Layout footerPaddingTop >
+    <Layout
+      location={props.location}
+      footerPaddingTop >
       <SEO title="Get In Touch" keywords={[
         `dayenio`, `dayenio tech`, `web`, `web application`, `freelance developer`, `developers`, `designers`, `freelance designers`,
         `make logo`, `build mobile app`, `android`, `ios`, `android app`, `ios app`, `website`, `hire a developer`, `front-end developers`,
@@ -31,7 +33,7 @@ export default props => {
         `nodejs freelancer`, `react freelancer`, `react.js freelancer`, `reactJS freelancer`, `mysql freelancer`, `mongodb freelancer`,
         `react-native freelancer`, 'JAM stack', 'JAM stack freelancer', 'JAM stack developer'
       ]} />
-      
+
       <div className='get-in-touch-page'>
 
         <Row className='mb-0'>
@@ -50,7 +52,7 @@ export default props => {
           </Col>
 
           <Col s={12} l={7} className='right-section relative'>
-            
+
             {
               <Row className="cover-parent shadow js-show hide">
                 <div className='child-container'>
@@ -60,7 +62,7 @@ export default props => {
             }
 
             <Container>
-              
+
 
               <form className='contact-form relative' netlify-honeypot="bot-field" action='./success-form/' name="contact" method="POST" data-netlify="true" >
                 <input type="hidden" name="form-name" value="contact" />
@@ -88,7 +90,7 @@ export default props => {
                 </Row>
                 <Row>
                   <div className='white-text'>
-                    We are available at <a href='https://wa.me/213696581187' data-content='what' className='white-text underline'>whatsapp</a>,&nbsp; 
+                    We are available at <a href='https://wa.me/213696581187' data-content='what' className='white-text underline'>whatsapp</a>,&nbsp;
                     <a href="https://t.me/khezetawina" className='white-text underline' data-content='tele'>telegram</a> and&nbsp;
                     <a href="https://twitter.com/siemahlsidem" className='white-text underline' data-content='twit'>twitter</a>.
                   </div>
@@ -111,7 +113,7 @@ export default props => {
         <Slider />
 
       </div>
-      
+
     </Layout>
   )
 }

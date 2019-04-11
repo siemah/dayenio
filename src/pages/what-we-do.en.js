@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container } from 'react-materialize';
-import Layout from '../components/layout';
+import Layout from '../components/layout/en';
 import SEO from '../components/seo';
 import Hero from '../components/hero';
 import ServiceItem from '../components/serviceItem';
@@ -31,7 +31,9 @@ export default props => {
 
 
   return (
-    <Layout footerPaddingTop >
+    <Layout
+      location={props.location}
+      footerPaddingTop >
       <SEO title="Waht We Do - DayenIO services" keywords={[
         `dayenio`, `dayenio tech`, `web`, `web application`, `freelance developer`, `developers`, `designers`, `freelance designers`,
         `make logo`, `build mobile app`, `android`, `ios`, `android app`, `ios app`, `website`, `hire a developer`, `front-end developers`,
