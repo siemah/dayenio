@@ -1,5 +1,5 @@
-
 import React from 'react'
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/layout/fr';
 import SEO from '../components/seo';
@@ -41,12 +41,12 @@ export default props => {
           <Col s={12} l={5} className='left-section white'>
             <Container className="anime-slideUp">
 
-              <h2 className='before-after-content' data-content='GET IN TOUCH'>
-                <span>Start the </span> Conversation.
+              <h2 className='before-after-content' data-content='ENTRER EN CONTACT'>
+                <span>Commancez le </span> Conversation.
               </h2>
                 <p>
-                  Every beautiful relationship starts with a <strong>simple hello</strong>.
-                  So let’s chat. It might just be the start of something memorable.
+                  <FormattedMessage id='get-in-touch-description-1' /> <strong><FormattedMessage id='get-in-touch-description-2' /></strong>.
+                  <FormattedMessage id='get-in-touch-description-3' />
               </p>
             </Container>
           </Col>
@@ -82,7 +82,7 @@ export default props => {
                 <Row className='phone-contact'>
                   <div className='col s12 m6'>
                     <img src={mobile} alt="mobile device"/>
-                    Or just pick up the phone.
+                    <FormattedMessage id='get-in-touch-pick-up-phone' />
                   </div>
                   <div className='col s12 m6'>
                     <a href="tel:+231696581187">+ 213 696 581 187</a>
@@ -90,7 +90,7 @@ export default props => {
                 </Row>
                 <Row>
                   <div className='white-text'>
-                    We are available at <a href='https://wa.me/213696581187' data-content='what' className='white-text underline'>whatsapp</a>,&nbsp;
+                    <FormattedMessage id='get-in-touch-available' /> <a href='https://wa.me/213696581187' data-content='what' className='white-text underline'>whatsapp</a>,&nbsp;
                     <a href="https://t.me/khezetawina" className='white-text underline' data-content='tele'>telegram</a> and&nbsp;
                     <a href="https://twitter.com/siemahlsidem" className='white-text underline' data-content='twit'>twitter</a>.
                   </div>
@@ -98,9 +98,9 @@ export default props => {
                 <Row>
                   <div data-netlify-recaptcha="true"></div>
                   <p>
-                    This form is protected by Invisible reCAPTCHA
-                    (<a href="https://policies.google.com/privacy?hl=en">Privacy</a>,&nbsp;
-                    <a href="https://policies.google.com/terms?hl=en">Terms</a>)
+                    <FormattedMessage id='get-in-touch-privacy'/>&nbsp;
+                    (<a href="https://policies.google.com/privacy?hl=en">confidentialité</a>, et
+                    <a href="https://policies.google.com/terms?hl=en">conditions</a>)
                   </p>
                 </Row>
               </form>

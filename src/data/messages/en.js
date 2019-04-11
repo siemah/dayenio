@@ -12,5 +12,11 @@ module.exports = {
   'brands': 'brands',
   'years': 'years',
   'get-started-description': 'Let grow up and join the flux of revolution together.',
-  'get-started-button': 'Join and get started'
+  'get-started-button': 'Join and get started',
+  'get-in-touch-description-1': 'Every beautiful relationship starts with a',
+  'get-in-touch-description-2': 'Simple Hello',
+  'get-in-touch-description-3': 'So let’s chat. It might just be the start of something memorable.',
+  'get-in-touch-pick-up-phone': 'Or just pick up the phone',
+  'get-in-touch-available': 'We are available on',
+  'get-in-touch-privacy': 'This form is protected by Invisible reCAPTCHA',
 };

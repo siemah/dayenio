@@ -27,7 +27,6 @@ const header = (props) => {
       key={lang.langKey}
       label={lang.langKey}
       className='navbar-link'
-      selected={lang.selected}
      />
  );
   currentLang = currentLang === 'en'? '' : currentLang;

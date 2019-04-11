@@ -12,5 +12,10 @@ module.exports = {
   'years': 'années',
   'get-started-description': 'Laissons grandir et rejoignons ensemble le flux de la révolution.',
   'get-started-button': 'Rejoignez et commencer',
-
+  'get-in-touch-description-1': 'Chaque belle relation commence par un',
+  'get-in-touch-description-2': 'Simple Bonjour',
+  'get-in-touch-description-3': "Alors parlons. Cela pourrait bien être le début de quelque chose d'inoubliable.",
+  'get-in-touch-pick-up-phone': 'Ou prenez simplement le téléphone',
+  'get-in-touch-available': 'Nous sommes disponibles à sur',
+  'get-in-touch-privacy': 'Ce formulaire est protégé par Invisible reCAPTCHA',
 };
