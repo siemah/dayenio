@@ -19,4 +19,11 @@ module.exports = {
   'get-in-touch-pick-up-phone': 'Or just pick up the phone',
   'get-in-touch-available': 'We are available on',
   'get-in-touch-privacy': 'This form is protected by Invisible reCAPTCHA',
+  'home-jumbotron-description-1': 'You want to make a/an',
+  'home-jumbotron-description-2': 'Or maybe you want to',
+  'home-jumbotron-description-3': 'hire a developer',
+  'home-jumbotron-description-4': 'to help your agency to grow up.',
+  'home-jumbotron-description-5': 'So, you are in ',
+  'home-jumbotron-description-6': 'a right spot and between good hands.',
+  'home-jumbotron-description-button': 'Expolore more',
 };

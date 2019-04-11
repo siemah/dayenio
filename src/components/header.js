@@ -21,7 +21,7 @@ const header = (props) => {
     }
   }
   const LangsLinkItem = langs.map(lang =>
-    currentLang.toLowerCase() !== lang.langKey.toLowerCase() &&
+    !lang.selected &&
     <LinkItem
       to={lang.link}
       key={lang.langKey}
