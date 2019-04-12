@@ -1,9 +1,10 @@
 .technos-use {
   padding: 40px 0;
-} 
+}
 .technos-use .technos-title {
   font-size: 30px;
   font-weight: 100;
+  color: #313131 !important;
 }
 
 .technos-use .technos-title strong {
