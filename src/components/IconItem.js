@@ -1,10 +1,11 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl';
 
-const IconItem = ({ source, label, description }) => (
+const IconItem = ({ source, label, descriptionId }) => (
   <div className='icon-item anime js-anime'>
     <img src={source} alt={label || ''} />
     <h3>{label}</h3>
-    <p> { description || '' } </p>
+    <p><FormattedMessage id={descriptionId} /></p>
   </div>
 );
 

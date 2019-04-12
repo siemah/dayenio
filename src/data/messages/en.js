@@ -26,4 +26,15 @@ module.exports = {
   'home-jumbotron-description-5': 'So, you are in ',
   'home-jumbotron-description-6': 'a right spot and between good hands.',
   'home-jumbotron-description-button': 'Expolore more',
+  'home-mainsection-title-1': 'Innovation and impact.',
+  'home-mainsection-description-1': 'Our team has two goals: optimise every user’s experience, and create real impact for our clients. ',
+  'home-mainsection-description-2': 'We worked with several client from diffirent countries like Frensh, Italy, Qatar, Algeria, KSA and many others countries.',
+  'home-mainsection-brands-title-1': 'Our happy clients.',
+  'home-mainsection-brands-description-1': "Hey, we’re old romantics at heart. For more than 6 years, we’ve cultivated long-term relationships with leading brands and companies.",
+
+  'home-mainsection-strategy': 'From concept to execution, we create digital campaigns from scratch and show you the way to expand your online presence and make it shine.',
+  'home-mainsection-marketing': 'Successful brands anticipate change. So we are always exploring the latest online marketing trends, keeping you ahead of the game.',
+  'home-mainsection-design': 'Smart and responsive are not just buzzwords. It’s the way we act and design. Delivering attention-grabbing graphics that just work is what we do best.',
+  'home-mainsection-development': "Beauty is nothing without usability and that's why our in-house devs work together with creatives. We use the latest technology and we never stop learning.",
+
 };

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { FormattedMessage } from 'react-intl';
 import { Container, Row, Col } from 'react-materialize';
 import IconItem from './IconItem';
 
@@ -22,32 +23,30 @@ const MainSection = props => {
       <Container className='custom-container'>
         <Row className='whatwedo-section'>
           <Col s={12} l={5} className='left-section js-anime anime'>
-            <h2 className='before-after-content' data-content='WHAT WE DO'>Innovation and impact.</h2>
+            <h2 className='before-after-content' data-content='WHAT WE DO'><FormattedMessage id='home-mainsection-title-1' /></h2>
             <p>
-              Our team has two goals: optimise every user’s experience,
-              and create real impact for our clients. <br />
-              We worked with several client from diffirent countries
-              like Frensh, Italy, Qatar, Algeria, KSA and many others countries.
+              <FormattedMessage id='home-mainsection-description-1' /><br />
+              <FormattedMessage id='home-mainsection-description-2' />
             </p>
             <div>
-              <Link to='/what-we-do' >Discover more</Link>
+              <Link to='/what-we-do' ><FormattedMessage id='home-jumbotron-description-button' /></Link>
             </div>
           </Col>
           <Col s={12} l={7} className='right-section'>
             <Row>
               <Col s={12} m={6}>
-                <IconItem source={strategy} label='Strategy' description='From concept to execution, we create digital campaigns from scratch and show you the way to expand your online presence and make it shine.' />
+                <IconItem source={strategy} label='Strategy' descriptionId='home-mainsection-strategy' />
               </Col>
               <Col s={12} m={6}>
-                <IconItem source={marketing} label='Marketing' description='Successful brands anticipate change. So we are always exploring the latest online marketing trends, keeping you ahead of the game.' />
+                <IconItem source={marketing} label='Marketing' descriptionId='home-mainsection-marketing' />
               </Col>
             </Row>
             <Row>
               <Col s={12} m={6}>
-                <IconItem source={design} label='Design' description='Smart and responsive are not just buzzwords. It’s the way we act and design. Delivering attention-grabbing graphics that just work is what we do best.' />
+                <IconItem source={design} label='Design' descriptionId='home-mainsection-design' />
               </Col>
               <Col s={12} m={6}>
-                <IconItem source={development} label='Developement' description="Beauty is nothing without usability and that's why our in-house devs work together with creatives. We use the latest technology and we never stop learning." />
+                <IconItem source={development} label='Developement' descriptionId="home-mainsection-development" />
               </Col>
             </Row>
           </Col>
@@ -61,13 +60,9 @@ const MainSection = props => {
           <Container>
 
 
-            <h2 className="before-after-content" data-content='BRANDS'>Our happy clients.</h2>
+            <h2 className="before-after-content" data-content='BRANDS'><FormattedMessage id='home-mainsection-brands-title-1' /></h2>
 
-            <p>
-              Hey, we’re old romantics at heart. For more than 6 years, we’ve
-              cultivated long-term relationships with leading brands
-              and companies.
-            </p>
+            <p><FormattedMessage id='home-mainsection-brands-description-1' /></p>
 
             <div className="brands-logo row">
               <Col s={6} m={3} className='center'>
@@ -90,7 +85,7 @@ const MainSection = props => {
 
         <div className='right-section js-parallax' data-direction='down'>
           <Button className='z-depth-0'>
-            <Link to='/our-works' alt='See what we build to this brands'>Discover more</Link>
+            <Link to='/our-works' alt='See what we build to this brands'><FormattedMessage id='home-jumbotron-description-button' /></Link>
           </Button>
         </div>
 

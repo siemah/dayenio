@@ -25,5 +25,15 @@ module.exports = {
   'home-jumbotron-description-5': 'Donc, vous êtes dans',
   'home-jumbotron-description-6': 'un bon endroit et entre de bonnes mains.',
   'home-jumbotron-description-button': 'Dicouvrir plus',
+  'home-mainsection-title-1': 'Innovation et impact.',
+  'home-mainsection-description-1': 'Notre équipe a deux objectifs: optimiser l’expérience de chaque utilisateur et créer un impact réel pour nos clients.',
+  'home-mainsection-description-2': 'Nous avons travaillé avec plusieurs clients de différents pays comme la France, l\'Italie, le Qatar, l\'Algérie, la KSA et de nombreux autres pays.',
+  'home-mainsection-brands-title-1': 'Nos clients heureux.',
+  'home-mainsection-brands-description-1': "Hé, nous sommes de vieux romantiques au coeur. Depuis plus de 6 ans, nous entretenons des relations à long terme avec des marques et des entreprises leaders.",
+
+  'home-mainsection-strategy': "Du concept à l'exécution, nous créons des campagnes numériques à partir de rien et vous montrons le moyen d'élargir votre présence en ligne et de la faire briller.",
+  'home-mainsection-marketing': 'Les marques qui réussissent anticipent le changement. Nous explorons donc toujours les dernières tendances en matière de marketing en ligne, pour vous garder en avance sur le match.',
+  'home-mainsection-design': "Intelligent et réactif ne sont pas que des mots à la mode. C’est notre façon d’agir et de concevoir. Fournir des graphiques accrocheurs qui fonctionnent est ce que nous faisons de mieux.",
+  'home-mainsection-development': "La beauté n’est rien sans la convivialité et c’est la raison pour laquelle nos développeurs internes travaillent en collaboration avec des créatifs. Nous utilisons les dernières technologies et nous n'arrêtons jamais d'apprendre.",
 
 };
