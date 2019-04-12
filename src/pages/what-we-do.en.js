@@ -86,63 +86,40 @@ export default props => {
 
           <ServiceItem
             number='1'
-            title='Hire membre/s of our team'
-            description={`You need a developer (front-end, back-end or full-stack), designer or mayne our team,
-            so you are at the right place. We can work to help your brand/agency to grow up & reach more costumers.
-            We work remotly or on office it depend to you & your entreprise.`}
+            titleId='what-we-do-title-1'
+            descriptionId={`what-we-do-description-1`}
             />
 
 
           <ServiceItem
             number='2'
-            title='Build Web application &amp; website'
-            description={`We build websites that make an impact and create true Internet Presence.
-            From responsive websites, content management systems to enterprise builds,
-            we provide full stack development to meet any creative and technological requirements.
-            The result is a better user experience, accessibility and enhanced brand recognition for better customers impression.`}
+            titleId='what-we-do-title-2'
+            descriptionId={`what-we-do-description-2`}
             />
 
           <ServiceItem
             number='3'
-            title='Ecommerce'
-            description={`If your Web presence requires eCommerce, we will guide you to the right solution.
-            We have years of experience working with a variety of platforms, including woocommerce,
-            and will recommend the best platform based on your budget and requirements.
-            Or maybe hire one or more than one developer of our team to help you & will build your product
-            to enhance your agency or brand & to grow up.`}
+            titleId='what-we-do-title-3'
+            descriptionId={`what-we-do-description-3`}
             />
 
           <ServiceItem
             number='4'
-            title='Mobile Apps'
-            description={`We make Android & IOS applications. We take your idea (no matter how crazy)
-            and build it into a stunning mobile application that your users will love.
-            Our focus is on product driven apps (apps that do something) rather
-            than campaign driven apps (apps that sell something). `}
+            titleId='what-we-do-title-4'
+            descriptionId={`what-we-do-description-4`}
           />
 
           <ServiceItem
             number='5'
-            title='Concepting & Strategy'
-            description={`There are numerous reasons why we’ve had multiple apps featured in mobile app stores.
-            Probably one of the biggest is the solid design behind everything we do. In a crowded marketplace,
-            the perfect design will help your product stand out. It’s the first touchpoint you’ll have
-             with users, and it’s important to make it count. `}
+            titleId='what-we-do-title-5'
+            descriptionId={`what-we-do-description-5`}
           />
 
           <ServiceItem
             number='6'
-            title='Design & UI/UX'
             className='mb-0'
-            description={`Logos are certainly a strong, symbolic asset for any brand.
-            At the same time, a logo isn’t the only way to define an organisation.
-            Visual language, such as colours, graphics, imagery,
-            typography & tone-of-voice all culminate in creating a
-            consistent and cohesive identity that will communicate
-            your values, positioning and personality.We temper our belief in change with
-            a conviction that it must be carefully managed.
-            We study the options. We identify precisely where you need to go.
-            Then, and only then, do we look at ways of getting you there.`}
+            titleId='what-we-do-title-6'
+            descriptionId={`what-we-do-description-6`}
           />
 
         </Container>
