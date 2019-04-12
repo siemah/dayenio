@@ -50,4 +50,8 @@ module.exports = {
   'what-we-do-title-6': 'Design & UI/UX',
   'what-we-do-description-6': 'Logos are certainly a strong, symbolic asset for any brand. At the same time, a logo isn’t the only way to define an organisation. Visual language, such as colours, graphics, imagery, typography & tone-of-voice all culminate in creating a consistent and cohesive identity that will communicate your values, positioning and personality.We temper our belief in change with a conviction that it must be carefully managed. We study the options. We identify precisely where you need to go. Then, and only then, do we look at ways of getting you there.',
 
+  'our-works-jumbotron-description-1': 'Take a tour and see what we’ve created in the past so we may',
+  'our-works-jumbotron-description-2': 'create something together',
+  'our-works-jumbotron-description-3': 'in the future!',
+
 };

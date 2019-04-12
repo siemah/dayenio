@@ -1,5 +1,6 @@
 
 import React from 'react'
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/layout/en';
 import SEO from '../components/seo';
@@ -35,8 +36,9 @@ const OurWorksPage = props => (
 
       <h2 className='technos-title relative center mt-0'>
         <Container className='anime-slideUp'>
-          Take a tour and see what we’ve created in the past so we may &nbsp;
-          <strong>create something together</strong> in the future!
+          <FormattedMessage id="our-works-jumbotron-description-1" /> &nbsp;
+          <strong><FormattedMessage id="our-works-jumbotron-description-2" /></strong>&nbsp;
+          <FormattedMessage id="our-works-jumbotron-description-3" />
         </Container>
       </h2>
 

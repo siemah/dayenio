@@ -49,4 +49,8 @@ module.exports = {
   'what-we-do-title-6': 'Design et UI/UX',
   'what-we-do-description-6': "Les logos sont certainement un atout puissant et symbolique pour toutes les marques. Dans le même temps, un logo n’est pas le seul moyen de définir une organisation. Le langage visuel, comme les couleurs, les graphiques, les images, la typographie et le ton de la voix, aboutit à la création d’une identité cohérente et cohérente qui communiquera vos valeurs, votre positionnement et votre personnalité.Nous tempérons notre conviction du changement avec conviction soigneusement géré. Nous étudions les options. Nous identifions précisément où vous devez aller. Ensuite, et seulement ensuite, nous examinons les moyens de vous y rendre.",
 
+  'our-works-jumbotron-description-1': "Faites un tour et voir ce que nous avons créé dans le passé afin que nous puissions",
+  'our-works-jumbotron-description-2': 'créer quelque chose ensemble',
+  'our-works-jumbotron-description-3': "A l'avenir!",
+
 };
