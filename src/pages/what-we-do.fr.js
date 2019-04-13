@@ -1,4 +1,5 @@
 import React from 'react';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 import { Container } from 'react-materialize';
 import Layout from '../components/layout/fr';
@@ -31,6 +32,19 @@ export default props => {
 
 
   return (
+    <PageTransition
+      defaultStyle={{
+        transition: 'right 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
+        right: '100%',
+        position: 'absolute',
+        width: '100%',
+      }}
+      transitionStyles={{
+        entering: { right: '0%' },
+        entered: { right: '0%' },
+        exiting: { right: '100%' },
+      }}
+      transitionTime={500} >
     <Layout
       location={props.location}
       footerPaddingTop >
@@ -129,5 +143,6 @@ export default props => {
       </div>
 
     </Layout>
+    </PageTransition>
   )
 }
