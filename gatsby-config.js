@@ -62,6 +62,13 @@ module.exports = {
         prefixDefault: false,
       }
     },
+    // transition page
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+      options: {
+        transitionTime: 250
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
