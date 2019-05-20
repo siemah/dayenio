@@ -82,7 +82,7 @@ export default [
     caseDescription: `is a training institute. train the elites in the field of ICT. In several times we have cuncus and manage events of the scientific club of this institute.`,
     isCarousel: true,
   },
-  {
+  /*{
     key: 'item-4',
     brand: 'Elshahrani',
     carouselImages: null,
@@ -94,5 +94,5 @@ export default [
     caseDescription: `Doctor mohammed elshahrani website is a doctor in IOT, Big Data, data analytic and more..`,
     link: `m-shahrani.com`,
     isCarousel: false,
-  },
+  },*/
 ]
