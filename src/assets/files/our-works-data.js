@@ -5,6 +5,7 @@ import jit from '../images/our-works/csi-inptic/jit-inptic.png';
 
 //Wellness Inc.
 import wellnessCaseImg from '../images/our-works/wellness/wellness2.png';
+import aalladineCaseImg from '../images/our-works/aalladine.com/aalladine.com-screenshoot.png';
 import android1 from '../images/our-works/wellness/android1.png';
 import android3 from '../images/our-works/wellness/android3.png';
 import android4 from '../images/our-works/wellness/android4.png';
@@ -18,8 +19,22 @@ import shahraniCase from '../images/our-works/elshahrani/shahrani1.png';
 import inptic from '../images/logos/brands/inptic.jpg';
 import wellnessLogo from '../images/logos/brands/wellness.png';
 import shahrani from '../images/logos/brands/shahrani.png';
+import aalladineLogo from '../images/logos/brands/aalladine.com.png';
 
 export default [
+  {
+    key: 'item-aalladine.com',
+    brand: 'Aalladine Co.',
+    carouselImages: null,
+    logo: aalladineLogo,
+    altLogo: 'aalladine brand',
+    caseImgAlt: 'wellness logo',
+    caseImg: aalladineCaseImg,
+    techs: ['HTML5', 'ReactJs', 'Gatsby', 'PHP'],
+    caseDescription: `Aalladine is an ecommerce website, to find all products user need in his daily life and they has a delivery service in Algeria.`,
+    link: `aalladine.com`,
+    isCarousel: false,
+  },
   {
     key: 'item-1',
     brand: 'Wellness Inc. Android App',
