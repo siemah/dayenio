@@ -1,5 +1,4 @@
 import React from 'react'
-import PageTransition from 'gatsby-plugin-page-transitions';
 import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/layout/en';
@@ -11,19 +10,7 @@ import { Row, Col } from 'react-materialize';
 import GetStarted from '../components/get-started';
 
 const AboutPage = props => (
-  <PageTransition
-  defaultStyle={{
-    transition: 'left 500ms cubic-bezier(0.47, 0, 0.75, 0.72)',
-    left: '100%',
-    position: 'absolute',
-    width: '100%',
-  }}
-  transitionStyles={{
-    entering: { left: '0%' },
-    entered: { left: '0%' },
-    exiting: { left: '100%' },
-  }}
-  transitionTime={500}>
+  
   <Layout location={props.location} >
     <SEO title="About DayenIO" keywords={[
       `dayenio`, `dayenio tech`, `web`, `web application`, `freelance developer`, `developers`, `designers`, `freelance designers`,
@@ -96,7 +83,6 @@ const AboutPage = props => (
     </div>
 
   </Layout>
-    </PageTransition>
 );
 
 export default AboutPage

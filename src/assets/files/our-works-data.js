@@ -13,12 +13,12 @@ import android5 from '../images/our-works/wellness/android5.png';
 import android6 from '../images/our-works/wellness/android6.png';
 
 //shahrani
-import shahraniCase from '../images/our-works/elshahrani/shahrani1.png';
+//import shahraniCase from '../images/our-works/elshahrani/shahrani1.png';
 
 //brands logo
 import inptic from '../images/logos/brands/inptic.jpg';
 import wellnessLogo from '../images/logos/brands/wellness.png';
-import shahrani from '../images/logos/brands/shahrani.png';
+//import shahrani from '../images/logos/brands/shahrani.png';
 import aalladineLogo from '../images/logos/brands/aalladine.com.png';
 
 export default [
