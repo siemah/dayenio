@@ -12,6 +12,7 @@ import marketing from '../assets/images/marketing.svg';
 import wellness from '../assets/images/logos/brands/wellness.png'
 import shahrani from '../assets/images/logos/brands/shahrani.png'
 import inptic from '../assets/images/logos/brands/inptic.jpg'
+import aalladine from '../assets/images/logos/brands/aalladine.com.png'
 
 import '../assets/css/main-section.css'
 import Button from 'react-materialize/lib/Button';
@@ -66,15 +67,19 @@ const MainSection = props => {
 
             <div className="brands-logo row">
               <Col s={6} m={3} className='center'>
-                <img src={wellness} width='80' alt="brand name" /><br />
+                <img src={aalladine} height='80' alt="aalladine" /><br />
+                <strong>Aalladine</strong>
+              </Col>
+              <Col s={6} m={3} className='center'>
+                <img src={wellness} height='80' alt="wellness" /><br />
                 <strong>Wellness qatar</strong>
               </Col>
               <Col s={6} m={3} className='center'>
-                <img src={shahrani} width='115' height='80' alt="brand name" /><br />
+                <img src={shahrani} height='115' height='80' alt="al shahrani" /><br />
                 <strong>Al Shahrani</strong>
               </Col>
               <Col s={6} m={3} className='center'>
-                <img src={inptic} width='80' alt="brand name" /><br />
+                <img src={inptic} height='80' alt="I.N.P.T.I.C" /><br />
                 <strong>I.N.P.T.IC</strong>
               </Col>
             </div>
