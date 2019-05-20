@@ -5,7 +5,7 @@ import jit from '../images/our-works/csi-inptic/jit-inptic.png';
 
 //Wellness Inc.
 import wellnessCaseImg from '../images/our-works/wellness/wellness2.png';
-import aalladineCaseImg from '../images/our-works/aalladine.com/aalladine.com-screenshoot.png';
+import aalladineCaseImg from '../images/our-works/aalladine.com/aalladine_com.png';
 import android1 from '../images/our-works/wellness/android1.png';
 import android3 from '../images/our-works/wellness/android3.png';
 import android4 from '../images/our-works/wellness/android4.png';
