@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Link } from 'gatsby';
-import debounce from 'lodash.debounce';
+//import debounce from 'lodash.debounce';
 import { Container, Row, Col } from 'react-materialize';
 
 import { SocialContactItem, LinkItem } from './sharedui';
@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
 
   constructor(props) {
     super(props);
-    this.emitDebounce = debounce(this._onScroll, 200); // prevent executing imediatly of callback  
+    this.emitDebounce = this._onScroll; // prevent executing imediatly of callback  
     this._onScroll = this._onScroll.bind(this);
   }
 

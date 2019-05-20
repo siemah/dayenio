@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { Row, Col, Button } from 'react-materialize';
 import { FormattedMessage } from 'react-intl';
 
-import debounce from 'lodash.debounce';
+//import debounce from 'lodash.debounce';
 import '../assets/css/jumbotron.css';
 import heroDevelopers from '../assets/images/hero-developers.svg';
 import blueBg from '../assets/images/bg-blue.svg';
@@ -13,7 +13,7 @@ export default class Jumbotron extends React.Component {
 
   constructor(props){
     super(props);
-    this.emitDebouce = debounce(this.slideUpCurrentBadge, 1500);
+    this.emitDebouce = this.slideUpCurrentBadge;
   }
 
   /**
