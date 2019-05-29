@@ -56,9 +56,10 @@ export default class Jumbotron extends React.Component {
                 <FormattedMessage id='home-jumbotron-description-1' />&nbsp;
                 <div className='services-list'>
                     <strong className='badge website slideup' data-index='0'>Website.</strong>
+                    <strong className='badge ios' data-index='2'>Web app.</strong>
                     <strong className='badge android' data-index='1'>Android app.</strong>
-                    <strong className='badge ios' data-index='2'>IOS app.</strong>
                     <strong className='badge graphic' data-index='3'>Flayer &amp; logo.</strong>
+                    <strong className='badge graphic' data-index='4'>Videos.</strong>
                   </div><br />
                 <FormattedMessage id='home-jumbotron-description-2' />&nbsp;
                 <strong className='badge-underline'><FormattedMessage id='home-jumbotron-description-3' /></strong>&nbsp;
