@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-
-// import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 import { IntlProvider } from 'react-intl';
 import 'intl';
@@ -43,6 +42,11 @@ const Layout = ({ children, location, footerPaddingTop, i18nMessages }) => {
             messages={i18nMessages}
           >
           <>
+          <Helmet>
+            <meta name="google-site-verification" content="Axmmeh5cg_593zSqOLOHEeUM2N-TSLXW53jWwD0H0nU" />
+            <meta name="robots" content="index,follow" />
+            <meta name="referrer" content="unsafe-url" />
+           </Helmet>
             <Header
               currentLang={langKey}
               siteTitle={data.site.siteMetadata.title}
