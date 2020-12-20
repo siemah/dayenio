@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://dayenio.ml`,
+    siteUrl: `https://www.dayenio.ga`,
     languages: {
       langs: ['en', 'fr'],
       defaultLangKey: 'en'
@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://dayenio.ml',
-        sitemap: 'https://dayenio.ml/sitemap.xml',
+        host: 'https://www.dayenio.ga',
+        sitemap: 'https://www.dayenio.ga/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
         output: '/robots.txt'
       }

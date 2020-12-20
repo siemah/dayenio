@@ -20,6 +20,7 @@ const Layout = ({ children, location, footerPaddingTop, i18nMessages }) => {
       query SiteTitleQuery {
         site {
           siteMetadata {
+            siteUrl
             title
             languages {
               defaultLangKey
@@ -35,7 +36,7 @@ const Layout = ({ children, location, footerPaddingTop, i18nMessages }) => {
         const langKey = getCurrentLangKey(langs, defaultLangKey, url);
         const homeLink = `/${langKey}`.replace(`/${defaultLangKey}/`, '/');
         const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, '/') }));
-
+        console.log(data)
         return (
           <IntlProvider
             locale={langKey}
@@ -45,7 +46,8 @@ const Layout = ({ children, location, footerPaddingTop, i18nMessages }) => {
           <Helmet>
             <meta name="google-site-verification" content="Axmmeh5cg_593zSqOLOHEeUM2N-TSLXW53jWwD0H0nU" />
             <meta name="robots" content="index,follow" />
-            <meta name="referrer" content="unsafe-url" />
+            <link rel="canonical" href={`${data.site.siteMetadata.siteUrl}${location.pathname}`} />
+            <meta name="og:url" content={`${data.site.siteMetadata.siteUrl}${location.pathname}`} />
            </Helmet>
             <Header
               currentLang={langKey}
